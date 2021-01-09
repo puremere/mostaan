@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mostaan", "mostaan\mostaan.csproj", "{4BC2C0C5-C5B5-4FDD-A68D-0A974713922E}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FIM", "FIM\FIM.vdproj", "{AD509A3D-3F2A-44B0-AACA-F0E3002038BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{4BC2C0C5-C5B5-4FDD-A68D-0A974713922E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BC2C0C5-C5B5-4FDD-A68D-0A974713922E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BC2C0C5-C5B5-4FDD-A68D-0A974713922E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD509A3D-3F2A-44B0-AACA-F0E3002038BB}.Debug|Any CPU.ActiveCfg = Debug
+		{AD509A3D-3F2A-44B0-AACA-F0E3002038BB}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

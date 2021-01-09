@@ -11,6 +11,21 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,8 +47,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BehComponents, Version=2.2.0.0, Culture=neutral, PublicKeyToken=a36ced8ede3e7af7, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,16 +67,299 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2018.3.1016.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Telerik.WinControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadDock, Version=2018.3.1016.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Telerik.WinControls.RadDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Light, Version=2018.3.1016.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Telerik.WinControls.Themes.VisualStudio2012Light.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2018.3.1016.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Telerik.WinControls.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2018.3.1016.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\TelerikCommon.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ChooseBank.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ChooseBank.Designer.cs">
+      <DependentUpon>ChooseBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\databaseManager.cs" />
+    <Compile Include="Classes\dateTimeConvert.cs" />
+    <Compile Include="Classes\FontClass.cs" />
+    <Compile Include="Classes\functions.cs" />
+    <Compile Include="Classes\GlobalVariable.cs" />
+    <Compile Include="Classes\Spanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DaryaftiReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaryaftiReport.Designer.cs">
+      <DependentUpon>DaryaftiReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="filterPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="filterPage.Designer.cs">
+      <DependentUpon>filterPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1-chooseList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1-chooseList.Designer.cs">
+      <DependentUpon>Form1-chooseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form10_addSarmaye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form10_addSarmaye.Designer.cs">
+      <DependentUpon>Form10_addSarmaye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form11-addMasrafi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form11-addMasrafi.Designer.cs">
+      <DependentUpon>Form11-addMasrafi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form12_addMasrafi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form12_addMasrafi.Designer.cs">
+      <DependentUpon>Form12_addMasrafi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form13-Hazine-edari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form13-Hazine-edari.Designer.cs">
+      <DependentUpon>Form13-Hazine-edari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form14-add-edari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form14-add-edari.Designer.cs">
+      <DependentUpon>Form14-add-edari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form15-addOmrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form15-addOmrani.Designer.cs">
+      <DependentUpon>Form15-addOmrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form16-omraniAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form16-omraniAddForm.Designer.cs">
+      <DependentUpon>Form16-omraniAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form17-gharadad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form17-gharadad.Designer.cs">
+      <DependentUpon>Form17-gharadad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form18_addgharadad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form18_addgharadad.Designer.cs">
+      <DependentUpon>Form18_addgharadad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form19-saryer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form19-saryer.Designer.cs">
+      <DependentUpon>Form19-saryer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2-shenasnameAdd-ettelateTarh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2-shenasnameAdd-ettelateTarh.Designer.cs">
+      <DependentUpon>Form2-shenasnameAdd-ettelateTarh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form20-addSayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form20-addSayer.Designer.cs">
+      <DependentUpon>Form20-addSayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form21-tashvighi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form21-tashvighi.Designer.cs">
+      <DependentUpon>Form21-tashvighi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form22-addTashvighi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form22-addTashvighi.Designer.cs">
+      <DependentUpon>Form22-addTashvighi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3-addGam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3-addGam.Designer.cs">
+      <DependentUpon>Form3-addGam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4_addFounder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4_addFounder.Designer.cs">
+      <DependentUpon>Form4_addFounder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form5-shenasnameList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5-shenasnameList.Designer.cs">
+      <DependentUpon>Form5-shenasnameList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form6-Money-Ejraeiat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6-Money-Ejraeiat.Designer.cs">
+      <DependentUpon>Form6-Money-Ejraeiat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form7-addEjraeiat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form7-addEjraeiat.Designer.cs">
+      <DependentUpon>Form7-addEjraeiat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form8-Money-Personal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form8-Money-Personal.Designer.cs">
+      <DependentUpon>Form8-Money-Personal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form9-money-sarmaye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form9-money-sarmaye.Designer.cs">
+      <DependentUpon>Form9-money-sarmaye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Intro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Intro.Designer.cs">
+      <DependentUpon>Intro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Context.cs" />
+    <Compile Include="newRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newRecord.Designer.cs">
+      <DependentUpon>newRecord.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ChooseBank.resx">
+      <DependentUpon>ChooseBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DaryaftiReport.resx">
+      <DependentUpon>DaryaftiReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="filterPage.resx">
+      <DependentUpon>filterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1-chooseList.resx">
+      <DependentUpon>Form1-chooseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form10_addSarmaye.resx">
+      <DependentUpon>Form10_addSarmaye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form11-addMasrafi.resx">
+      <DependentUpon>Form11-addMasrafi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form12_addMasrafi.resx">
+      <DependentUpon>Form12_addMasrafi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form13-Hazine-edari.resx">
+      <DependentUpon>Form13-Hazine-edari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form14-add-edari.resx">
+      <DependentUpon>Form14-add-edari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form15-addOmrani.resx">
+      <DependentUpon>Form15-addOmrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form16-omraniAddForm.resx">
+      <DependentUpon>Form16-omraniAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form17-gharadad.resx">
+      <DependentUpon>Form17-gharadad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form18_addgharadad.resx">
+      <DependentUpon>Form18_addgharadad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form19-saryer.resx">
+      <DependentUpon>Form19-saryer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2-shenasnameAdd-ettelateTarh.resx">
+      <DependentUpon>Form2-shenasnameAdd-ettelateTarh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form20-addSayer.resx">
+      <DependentUpon>Form20-addSayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form21-tashvighi.resx">
+      <DependentUpon>Form21-tashvighi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form22-addTashvighi.resx">
+      <DependentUpon>Form22-addTashvighi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3-addGam.resx">
+      <DependentUpon>Form3-addGam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4_addFounder.resx">
+      <DependentUpon>Form4_addFounder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5-shenasnameList.resx">
+      <DependentUpon>Form5-shenasnameList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6-Money-Ejraeiat.resx">
+      <DependentUpon>Form6-Money-Ejraeiat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form7-addEjraeiat.resx">
+      <DependentUpon>Form7-addEjraeiat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form8-Money-Personal.resx">
+      <DependentUpon>Form8-Money-Personal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form9-money-sarmaye.resx">
+      <DependentUpon>Form9-money-sarmaye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Intro.resx">
+      <DependentUpon>Intro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newRecord.resx">
+      <DependentUpon>newRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -61,7 +368,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="IRANSans%28FaNum%29.ttf" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -74,6 +387,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BehComponents.dll" />
+    <None Include="Resources\del2.png" />
+    <None Include="Resources\del1.png" />
+    <None Include="Resources\del.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
