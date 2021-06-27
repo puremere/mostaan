@@ -50,7 +50,7 @@ namespace mostaan
             {
                 //ChooseBank choosbank = new ChooseBank();
                 //choosbank.Show();
-                Form1_chooseList form = new Form1_chooseList();
+                zero form = new zero();
                 form.Show();
                 this.Hide();
             }

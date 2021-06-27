@@ -183,7 +183,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(101, 37);
             this.label10.TabIndex = 0;
-            this.label10.Text = "سایر هزینه ها";
+            this.label10.Text = "مواد  اولیه";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
@@ -289,7 +289,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(1119, 43);
             this.label12.TabIndex = 5;
-            this.label12.Text = "پیش بینی سایر هزینه ها";
+            this.label12.Text = "پیش بینی مواد اولیه";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // panel5
@@ -479,7 +479,7 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // radScrollablePanel1
+            // radscrollpanel2
             // 
             this.radScrollablePanel1.AllowAutomaticScrollToControl = false;
             this.radScrollablePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -487,7 +487,7 @@
             this.radScrollablePanel1.Name = "radScrollablePanel1";
             this.radScrollablePanel1.Padding = new System.Windows.Forms.Padding(0);
             // 
-            // radScrollablePanel1.PanelContainer
+            // radscrollpanel2.PanelContainer
             // 
             this.radScrollablePanel1.PanelContainer.Controls.Add(this.dataGridView1);
             this.radScrollablePanel1.PanelContainer.Location = new System.Drawing.Point(0, 0);
@@ -584,6 +584,7 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "نظرات مدیر پروژه";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel3
             // 
@@ -608,6 +609,7 @@
             this.radpanel0.TabIndex = 0;
             this.radpanel0.Text = "هزینه های پیش بینی شده";
             this.radpanel0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radpanel0.Click += new System.EventHandler(this.radpanel0_Click);
             // 
             // panel2
             // 

@@ -22,8 +22,12 @@ namespace mostaan
         public static Font headerlistFONT { get; set; }
         public static Font headerlistFONTBold { get; set; }
         public static Font headerlistFONTsmall { get; set; }
-        public static int  shenasnameID { get; set; }
-                                           //public static Font shoonzdah { get; set; }
+        public static string  shenasnameID { get; set; }
+        public static string bakhshID { get; set; }
+        public static string markazID { get; set; }
+        public static string comiteID { get; set; }
+        
+        //public static Font shoonzdah { get; set; }
 
         //public static string role = "user";
 

@@ -89,11 +89,59 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bakhsh_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bakhsh_add.Designer.cs">
+      <DependentUpon>Bakhsh_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bakhsh_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bakhsh_List.Designer.cs">
+      <DependentUpon>Bakhsh_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bakhsh_ShoCopies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bakhsh_ShoCopies.Designer.cs">
+      <DependentUpon>Bakhsh_ShoCopies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bank_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bank_Add.Designer.cs">
+      <DependentUpon>Bank_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bank_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bank_List.Designer.cs">
+      <DependentUpon>Bank_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="checkAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="checkAdd.Designer.cs">
+      <DependentUpon>checkAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="checkList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="checkList.Designer.cs">
+      <DependentUpon>checkList.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChooseBank.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ChooseBank.Designer.cs">
       <DependentUpon>ChooseBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bakhsh_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bakhsh_Menu.Designer.cs">
+      <DependentUpon>Bakhsh_Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\databaseManager.cs" />
     <Compile Include="Classes\dateTimeConvert.cs" />
@@ -103,17 +151,100 @@
     <Compile Include="Classes\Spanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="DaryaftiReport.cs">
+    <Compile Include="comment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DaryaftiReport.Designer.cs">
-      <DependentUpon>DaryaftiReport.cs</DependentUpon>
+    <Compile Include="comment.Designer.cs">
+      <DependentUpon>comment.cs</DependentUpon>
     </Compile>
-    <Compile Include="filterPage.cs">
+    <Compile Include="daryaftiFilter.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="filterPage.Designer.cs">
-      <DependentUpon>filterPage.cs</DependentUpon>
+    <Compile Include="daryaftiFilter.Designer.cs">
+      <DependentUpon>daryaftiFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="factorImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="factorImage.Designer.cs">
+      <DependentUpon>factorImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="factorPdf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="factorPdf.Designer.cs">
+      <DependentUpon>factorPdf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Komite_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Komite_Add.Designer.cs">
+      <DependentUpon>Komite_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Komite_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Komite_List.Designer.cs">
+      <DependentUpon>Komite_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Komite_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Komite_Menu.Designer.cs">
+      <DependentUpon>Komite_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Komite_ShoCopies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Komite_ShoCopies.Designer.cs">
+      <DependentUpon>Komite_ShoCopies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lilooo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lilooo.Designer.cs">
+      <DependentUpon>lilooo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Markaz_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Markaz_add.Designer.cs">
+      <DependentUpon>Markaz_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Markaz_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Markaz_List.Designer.cs">
+      <DependentUpon>Markaz_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Markaz_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Markaz_Menu.Designer.cs">
+      <DependentUpon>Markaz_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Markaz_ShoCopies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Markaz_ShoCopies.Designer.cs">
+      <DependentUpon>Markaz_ShoCopies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106040614235_chatDB.cs" />
+    <Compile Include="Migrations\202106040614235_chatDB.Designer.cs">
+      <DependentUpon>202106040614235_chatDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\configuration.cs" />
+    <Compile Include="PardakhtiReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PardakhtiReport.Designer.cs">
+      <DependentUpon>PardakhtiReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PardakhtiFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PardakhtiFilter.Designer.cs">
+      <DependentUpon>PardakhtiFilter.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1-chooseList.cs">
       <SubType>Form</SubType>
@@ -205,6 +336,12 @@
     <Compile Include="Form22-addTashvighi.Designer.cs">
       <DependentUpon>Form22-addTashvighi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form23_showCopies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form23_showCopies.Designer.cs">
+      <DependentUpon>Form23_showCopies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form3-addGam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -261,28 +398,143 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Context.cs" />
-    <Compile Include="newRecord.cs">
+    <Compile Include="daryaftiNew.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="newRecord.Designer.cs">
-      <DependentUpon>newRecord.cs</DependentUpon>
+    <Compile Include="daryaftiNew.Designer.cs">
+      <DependentUpon>daryaftiNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pardakhtiNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pardakhtiNew.Designer.cs">
+      <DependentUpon>pardakhtiNew.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="test.cs">
+    <Compile Include="projectFiles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="test.Designer.cs">
-      <DependentUpon>test.cs</DependentUpon>
+    <Compile Include="projectFiles.Designer.cs">
+      <DependentUpon>projectFiles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="daryaftiReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="daryaftiReport.Designer.cs">
+      <DependentUpon>daryaftiReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tamincheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tamincheck.Designer.cs">
+      <DependentUpon>tamincheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tamin_New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tamin_New.Designer.cs">
+      <DependentUpon>tamin_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tamin_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tamin_Report.Designer.cs">
+      <DependentUpon>tamin_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Add.Designer.cs">
+      <DependentUpon>User_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_List.Designer.cs">
+      <DependentUpon>User_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\shenasnameCopiesVM.cs" />
+    <Compile Include="zero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zero.Designer.cs">
+      <DependentUpon>zero.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Bakhsh_add.resx">
+      <DependentUpon>Bakhsh_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bakhsh_List.resx">
+      <DependentUpon>Bakhsh_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bakhsh_ShoCopies.resx">
+      <DependentUpon>Bakhsh_ShoCopies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bank_Add.resx">
+      <DependentUpon>Bank_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bank_List.resx">
+      <DependentUpon>Bank_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="checkAdd.resx">
+      <DependentUpon>checkAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="checkList.resx">
+      <DependentUpon>checkList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChooseBank.resx">
       <DependentUpon>ChooseBank.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DaryaftiReport.resx">
-      <DependentUpon>DaryaftiReport.cs</DependentUpon>
+    <EmbeddedResource Include="Bakhsh_Menu.resx">
+      <DependentUpon>Bakhsh_Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="filterPage.resx">
-      <DependentUpon>filterPage.cs</DependentUpon>
+    <EmbeddedResource Include="comment.resx">
+      <DependentUpon>comment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="daryaftiFilter.resx">
+      <DependentUpon>daryaftiFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="factorImage.resx">
+      <DependentUpon>factorImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="factorPdf.resx">
+      <DependentUpon>factorPdf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Komite_Add.resx">
+      <DependentUpon>Komite_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Komite_List.resx">
+      <DependentUpon>Komite_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Komite_Menu.resx">
+      <DependentUpon>Komite_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Komite_ShoCopies.resx">
+      <DependentUpon>Komite_ShoCopies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lilooo.resx">
+      <DependentUpon>lilooo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Markaz_add.resx">
+      <DependentUpon>Markaz_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Markaz_List.resx">
+      <DependentUpon>Markaz_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Markaz_Menu.resx">
+      <DependentUpon>Markaz_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Markaz_ShoCopies.resx">
+      <DependentUpon>Markaz_ShoCopies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106040614235_chatDB.resx">
+      <DependentUpon>202106040614235_chatDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PardakhtiReport.resx">
+      <DependentUpon>PardakhtiReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PardakhtiFilter.resx">
+      <DependentUpon>PardakhtiFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1-chooseList.resx">
       <DependentUpon>Form1-chooseList.cs</DependentUpon>
@@ -329,6 +581,9 @@
     <EmbeddedResource Include="Form22-addTashvighi.resx">
       <DependentUpon>Form22-addTashvighi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form23_showCopies.resx">
+      <DependentUpon>Form23_showCopies.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form3-addGam.resx">
       <DependentUpon>Form3-addGam.cs</DependentUpon>
     </EmbeddedResource>
@@ -356,8 +611,14 @@
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="newRecord.resx">
-      <DependentUpon>newRecord.cs</DependentUpon>
+    <EmbeddedResource Include="daryaftiNew.resx">
+      <DependentUpon>daryaftiNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pardakhtiNew.resx">
+      <DependentUpon>pardakhtiNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projectFiles.resx">
+      <DependentUpon>projectFiles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -370,11 +631,30 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="test.resx">
-      <DependentUpon>test.cs</DependentUpon>
+    <EmbeddedResource Include="daryaftiReport.resx">
+      <DependentUpon>daryaftiReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tamincheck.resx">
+      <DependentUpon>tamincheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tamin_New.resx">
+      <DependentUpon>tamin_New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tamin_Report.resx">
+      <DependentUpon>tamin_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Add.resx">
+      <DependentUpon>User_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_List.resx">
+      <DependentUpon>User_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zero.resx">
+      <DependentUpon>zero.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="IRANSans%28FaNum%29.ttf" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\mostaan.Model.user.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -400,6 +680,25 @@
     <None Include="Resources\del2.png" />
     <None Include="Resources\del1.png" />
     <None Include="Resources\del.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

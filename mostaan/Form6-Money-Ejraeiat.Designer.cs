@@ -28,9 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form6_PMainMoney));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Del = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.header = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
@@ -61,21 +66,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.radPanel11 = new Telerik.WinControls.UI.RadPanel();
-            this.Nhazine = new System.Windows.Forms.Label();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.radPanel12 = new Telerik.WinControls.UI.RadPanel();
-            this.Phazine = new System.Windows.Forms.Label();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.radPanel13 = new Telerik.WinControls.UI.RadPanel();
@@ -85,12 +75,11 @@
             this.label18 = new System.Windows.Forms.Label();
             this.panelNum1 = new Telerik.WinControls.UI.RadPanel();
             this.panelNum2 = new Telerik.WinControls.UI.RadPanel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Del = new System.Windows.Forms.DataGridViewImageColumn();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
@@ -118,20 +107,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPanel10)).BeginInit();
             this.radPanel10.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radPanel11)).BeginInit();
-            this.radPanel11.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel11.SuspendLayout();
-            this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radPanel12)).BeginInit();
-            this.radPanel12.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel13)).BeginInit();
@@ -143,10 +118,6 @@
             this.panelNum1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelNum2)).BeginInit();
             this.panelNum2.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tableLayoutPanel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -175,6 +146,76 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.34728F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1170, 698);
             this.tableLayoutPanel1.TabIndex = 3;
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 1;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel7.Controls.Add(this.dataGridView1, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.panel6, 0, 1);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 199);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 2;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1164, 301);
+            this.tableLayoutPanel7.TabIndex = 7;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Del});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dataGridView1.RowTemplate.Height = 55;
+            this.dataGridView1.RowTemplate.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(1158, 264);
+            this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick_1);
+            // 
+            // Del
+            // 
+            this.Del.HeaderText = "حذف";
+            this.Del.Image = global::mostaan.Properties.Resources.del2;
+            this.Del.Name = "Del";
+            this.Del.ReadOnly = true;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.pictureBox1);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(3, 273);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1158, 25);
+            this.panel6.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1129, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(29, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // header
             // 
@@ -232,6 +273,7 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "نظرات مدیر پروژه";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel3
             // 
@@ -256,6 +298,7 @@
             this.radpanel0.TabIndex = 0;
             this.radpanel0.Text = "هزینه های پیش بینی شده";
             this.radpanel0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radpanel0.Click += new System.EventHandler(this.radpanel0_Click);
             // 
             // panel2
             // 
@@ -337,7 +380,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(101, 37);
             this.label10.TabIndex = 0;
-            this.label10.Text = "سایر هزینه ها";
+            this.label10.Text = "مواد اولیه";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
@@ -578,190 +621,11 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.tableLayoutPanel4);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(3, 506);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1164, 104);
             this.panel5.TabIndex = 8;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.6917F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.3083F));
-            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel6, 1, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 104F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1164, 104);
-            this.tableLayoutPanel4.TabIndex = 0;
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 1;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Controls.Add(this.panel8, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.panel9, 0, 1);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 2;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.35616F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 61.64384F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(560, 98);
-            this.tableLayoutPanel5.TabIndex = 0;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.panel12);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(3, 3);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(554, 31);
-            this.panel8.TabIndex = 0;
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.label16);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(0, 0);
-            this.panel12.Name = "panel12";
-            this.panel12.Padding = new System.Windows.Forms.Padding(0, 0, 50, 0);
-            this.panel12.Size = new System.Drawing.Size(554, 31);
-            this.panel12.TabIndex = 1;
-            // 
-            // label16
-            // 
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(0, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(504, 31);
-            this.label16.TabIndex = 1;
-            this.label16.Text = "کل هزینه های نهایی";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.radPanel11);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(3, 40);
-            this.panel9.Name = "panel9";
-            this.panel9.Padding = new System.Windows.Forms.Padding(130, 0, 50, 0);
-            this.panel9.Size = new System.Drawing.Size(554, 55);
-            this.panel9.TabIndex = 1;
-            // 
-            // radPanel11
-            // 
-            this.radPanel11.Controls.Add(this.Nhazine);
-            this.radPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radPanel11.Location = new System.Drawing.Point(130, 0);
-            this.radPanel11.Name = "radPanel11";
-            this.radPanel11.Size = new System.Drawing.Size(374, 55);
-            this.radPanel11.TabIndex = 5;
-            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanel11.GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(154)))), ((int)(((byte)(154)))));
-            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanel11.GetChildAt(0).GetChildAt(1))).Visibility = Telerik.WinControls.ElementVisibility.Visible;
-            // 
-            // Nhazine
-            // 
-            this.Nhazine.BackColor = System.Drawing.Color.Transparent;
-            this.Nhazine.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Nhazine.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Nhazine.ForeColor = System.Drawing.Color.Black;
-            this.Nhazine.Location = new System.Drawing.Point(0, 0);
-            this.Nhazine.Name = "Nhazine";
-            this.Nhazine.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Nhazine.Size = new System.Drawing.Size(374, 55);
-            this.Nhazine.TabIndex = 0;
-            this.Nhazine.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 1;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Controls.Add(this.panel7, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.panel10, 0, 1);
-            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(569, 3);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 2;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.9863F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63.0137F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(592, 98);
-            this.tableLayoutPanel6.TabIndex = 1;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.panel11);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(3, 3);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(586, 30);
-            this.panel7.TabIndex = 0;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.label15);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(0, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Padding = new System.Windows.Forms.Padding(0, 0, 50, 0);
-            this.panel11.Size = new System.Drawing.Size(586, 30);
-            this.panel11.TabIndex = 0;
-            // 
-            // label15
-            // 
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(0, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(536, 30);
-            this.label15.TabIndex = 1;
-            this.label15.Text = "کل هزینه های پیش بینی شده";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.radPanel12);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(3, 39);
-            this.panel10.Name = "panel10";
-            this.panel10.Padding = new System.Windows.Forms.Padding(130, 0, 50, 0);
-            this.panel10.Size = new System.Drawing.Size(586, 56);
-            this.panel10.TabIndex = 1;
-            // 
-            // radPanel12
-            // 
-            this.radPanel12.Controls.Add(this.Phazine);
-            this.radPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radPanel12.Location = new System.Drawing.Point(130, 0);
-            this.radPanel12.Name = "radPanel12";
-            this.radPanel12.Size = new System.Drawing.Size(406, 56);
-            this.radPanel12.TabIndex = 4;
-            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanel12.GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(157)))), ((int)(((byte)(154)))), ((int)(((byte)(154)))));
-            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanel12.GetChildAt(0).GetChildAt(1))).Visibility = Telerik.WinControls.ElementVisibility.Visible;
-            // 
-            // Phazine
-            // 
-            this.Phazine.BackColor = System.Drawing.Color.Transparent;
-            this.Phazine.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Phazine.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Phazine.ForeColor = System.Drawing.Color.Black;
-            this.Phazine.Location = new System.Drawing.Point(0, 0);
-            this.Phazine.Name = "Phazine";
-            this.Phazine.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Phazine.Size = new System.Drawing.Size(406, 56);
-            this.Phazine.TabIndex = 0;
-            this.Phazine.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel8
             // 
@@ -877,75 +741,6 @@
             ((Telerik.WinControls.UI.RadPanelElement)(this.panelNum2.GetChildAt(0))).Padding = new System.Windows.Forms.Padding(2);
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.panelNum2.GetChildAt(0).GetChildAt(1))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
             // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.pictureBox1);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(3, 273);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1158, 25);
-            this.panel6.TabIndex = 3;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1129, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Del});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dataGridView1.RowTemplate.Height = 55;
-            this.dataGridView1.RowTemplate.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1158, 264);
-            this.dataGridView1.TabIndex = 4;
-            // 
-            // Del
-            // 
-            this.Del.HeaderText = "حذف";
-            this.Del.Image = global::mostaan.Properties.Resources.del2;
-            this.Del.Name = "Del";
-            this.Del.ReadOnly = true;
-            // 
-            // tableLayoutPanel7
-            // 
-            this.tableLayoutPanel7.ColumnCount = 1;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Controls.Add(this.dataGridView1, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.panel6, 0, 1);
-            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 199);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 2;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1164, 301);
-            this.tableLayoutPanel7.TabIndex = 7;
-            // 
             // Form6_PMainMoney
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -956,6 +751,10 @@
             this.Text = "اجراییات";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).EndInit();
             this.radPanel1.ResumeLayout(false);
@@ -983,20 +782,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPanel10)).EndInit();
             this.radPanel10.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radPanel11)).EndInit();
-            this.radPanel11.ResumeLayout(false);
-            this.tableLayoutPanel6.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radPanel12)).EndInit();
-            this.radPanel12.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radPanel13)).EndInit();
@@ -1008,10 +793,6 @@
             this.panelNum1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelNum2)).EndInit();
             this.panelNum2.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tableLayoutPanel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1048,21 +829,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Panel panel9;
-        private Telerik.WinControls.UI.RadPanel radPanel11;
-        private System.Windows.Forms.Label Nhazine;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Panel panel10;
-        private Telerik.WinControls.UI.RadPanel radPanel12;
-        private System.Windows.Forms.Label Phazine;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.Panel panel13;
         private Telerik.WinControls.UI.RadPanel radPanel13;

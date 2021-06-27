@@ -46,32 +46,48 @@ namespace mostaan
         }
         private void label7_Click(object sender, EventArgs e)
         {
-            Model.sayer model = new Model.sayer()
+
+            mostaan.Model.sayer model = new Model.sayer()
             {
-                kollPD = Int32.Parse(dollari.Text),
-                kollPR = Int32.Parse(rially.Text),
+                count = Int32.Parse(count.Text),
+                creatoreCo = Ctitle.Text,
                 title = title.Text,
+                kollPD = Int32.Parse(koldollary.Text),
+                kollPR = Int32.Parse(kolrially.Text),
+                vahedPD = Int32.Parse(vaheddollary.Text),
+                vahedPR = Int32.Parse(vahedrially.Text),
                 shenasnameID = GlobalVariable.shenasnameID,
 
 
             };
-            dbcontext.sayers.Add(model);
-            dbcontext.SaveChanges();
-            int index = 0;
-            foreach (Form form in Application.OpenForms)
+            Model.sayer item = dbcontext.sayers.SingleOrDefault(x => x.title == title.Text && x.shenasnameID == GlobalVariable.shenasnameID);
+            if (item == null)
             {
-                if (form.Name == "Form19_saryer")
+                dbcontext.sayers.Add(model);
+                dbcontext.SaveChanges();
+                int indexx = 0;
+                foreach (Form form in Application.OpenForms)
                 {
-                    break;
+                    if (form.Name == "Form19_saryer")
+                    {
+                        
+                        break;
+                    }
+
+                    indexx += 1;
                 }
+                this.Hide();
 
-                index += 1;
+                Application.OpenForms[indexx].Close();
+                Form19_saryer form11 = new Form19_saryer();
+                form11.Show();
             }
-            this.Hide();
+            else
+            {
+                message.Text = "عنوان تکراری مجاز نیست";
+            }
 
-            Application.OpenForms[index].Close();
-            Form19_saryer form13 = new Form19_saryer();
-            form13.Show();
+           
         }
         private void notEmpty(object sender, CancelEventArgs e)
         {
@@ -106,5 +122,16 @@ namespace mostaan
             }
         }
 
+        private void vahedrially_Leave(object sender, EventArgs e)
+        {
+            kolrially.Text = (Int32.Parse(vahedrially.Text) * Int32.Parse(count.Text)).ToString();
+
+        }
+
+        private void vaheddollary_Leave(object sender, EventArgs e)
+        {
+            koldollary.Text = (Int32.Parse(vaheddollary.Text) * Int32.Parse(count.Text)).ToString();
+
+        }
     }
 }

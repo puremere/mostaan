@@ -15,7 +15,7 @@ namespace mostaan
     public partial class Form11_addMasrafi : Form
     {
        
-        int shenasnameID = GlobalVariable.shenasnameID;
+        string shenasnameID = GlobalVariable.shenasnameID;
         public Form11_addMasrafi()
         {
             InitializeComponent();
@@ -223,39 +223,53 @@ namespace mostaan
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Form12_addMasrafi form10 = new Form12_addMasrafi();
-            form10.Show();
-            this.Hide();
+            using (var dbcontext = new Model.Context())
+            {
+                Model.shenasname item = dbcontext.shenasnames.Where(x => x.ID == GlobalVariable.shenasnameID).FirstOrDefault();
+                if (item.final != 1)
+                {
+                    Form12_addMasrafi form10 = new Form12_addMasrafi();
+                    form10.Show();
+                   
+                }
+            }
+               
+                
         }
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             using (var dbcontext = new Model.Context())
             {
-                int iSelectedGridIndex = dataGridView1.CurrentCell.ColumnIndex;
-                if (iSelectedGridIndex != 0)
-                    return;
-                int rowindex = dataGridView1.CurrentCell.RowIndex;
-                string rowID = dataGridView1.Rows[rowindex].Cells[2].Value.ToString();
-
-                Model.masrafi model = dbcontext.masrafis.SingleOrDefault(x => x.title == rowID && x.shenasnameID == GlobalVariable.shenasnameID);
-                dbcontext.Entry(model).State = EntityState.Deleted;
-                dbcontext.SaveChanges();
-                int index = 0;
-                foreach (Form form in Application.OpenForms)
+                Model.shenasname item = dbcontext.shenasnames.Where(x => x.ID == GlobalVariable.shenasnameID).FirstOrDefault();
+                if (item.final != 1)
                 {
-                    if (form.Name == "Form11_addMasrafi")
+                    int iSelectedGridIndex = dataGridView1.CurrentCell.ColumnIndex;
+                    if (iSelectedGridIndex != 0)
+                        return;
+                    int rowindex = dataGridView1.CurrentCell.RowIndex;
+                    string rowID = dataGridView1.Rows[rowindex].Cells[2].Value.ToString();
+
+                    Model.masrafi model = dbcontext.masrafis.SingleOrDefault(x => x.title == rowID && x.shenasnameID == GlobalVariable.shenasnameID);
+                    dbcontext.Entry(model).State = EntityState.Deleted;
+                    dbcontext.SaveChanges();
+                    int index = 0;
+                    foreach (Form form in Application.OpenForms)
                     {
-                        break;
+                        if (form.Name == "Form11_addMasrafi")
+                        {
+                            break;
+                        }
+
+                        index += 1;
                     }
+                    this.Hide();
 
-                    index += 1;
+                    Application.OpenForms[index-1].Close();
+                    Form11_addMasrafi form13 = new Form11_addMasrafi();
+                    form13.Show();
                 }
-                this.Hide();
-
-                Application.OpenForms[index].Close();
-                Form11_addMasrafi form13 = new Form11_addMasrafi();
-                form13.Show();
+                    
             }
         }
 
@@ -266,9 +280,9 @@ namespace mostaan
 
         private void dataGridView1_Click(object sender, EventArgs e)
         {
-            //int val = this.radScrollablePanel1.HorizontalScrollbar.Value;
-            //this.radScrollablePanel1.HorizontalScrollbar.Value = val + 10;
-            //this.radScrollablePanel1.HorizontalScrollbar.Value = val - 10;
+            //int val = this.radscrollpanel2.HorizontalScrollbar.Value;
+            //this.radscrollpanel2.HorizontalScrollbar.Value = val + 10;
+            //this.radscrollpanel2.HorizontalScrollbar.Value = val - 10;
 
         }
 
@@ -344,6 +358,20 @@ namespace mostaan
         private void label11_Click(object sender, EventArgs e)
         {
             Form21_tashvighi form = new Form21_tashvighi();
+            form.Show();
+            this.Hide();
+        }
+
+        private void radpanel0_Click(object sender, EventArgs e)
+        {
+            Form6_PMainMoney form = new Form6_PMainMoney();
+            form.Show();
+            this.Hide();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            comment form = new comment();
             form.Show();
             this.Hide();
         }

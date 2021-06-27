@@ -13,10 +13,14 @@ namespace mostaan.Model
 
     class Context : DbContext
     {
+      
         public Context() : base("mostaan")
         {
-            Database.SetInitializer<Context>(new DropCreateDatabaseIfModelChanges<Context>());
+            Database.SetInitializer<Context>(new MigrateDatabaseToLatestVersion<Context, mostaan.Migrations.Configuration>());
+            //Database.SetInitializer<Context>(new DropCreateDatabaseIfModelChanges<Context>());
+            
         }
+     
 
         public DbSet<archive> Archives { get; set; }
         public DbSet<shenasname> shenasnames { get; set; }
@@ -30,10 +34,142 @@ namespace mostaan.Model
         public DbSet<gharardad>  gharardads { get; set; }
         public DbSet<sayer> sayers { get; set; }
         public DbSet<tashvighi> tashvighis { get; set; }
-        
+        public DbSet<user> users { get; set; }
+        public DbSet<bakhsh> bakhshes { get; set; }
+        public DbSet<markaz> markazs { get; set; }
+
+        public DbSet<komite> komites { get; set; }
+        public DbSet<tamin> tamins { get; set; }
+        public DbSet<bank> banks { get; set; }
+        public DbSet<check> checks { get; set; }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
 
     }
+    class tamin
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int ID { get; set; }
+        [Display(Name = "موضوع")]
+        public string subject { get; set; }
+        public string imageName { get; set; }
+        public string shnesnameTitle { get; set; }
+        public string rank { get; set; }
+        public string markaz { get; set; }
+        public string project { get; set; } // parentID
+        public string type { get; set; }
+        public string radif { get; set; } // radifID
+        public string radifTitle { get; set; }
+        public DateTime tarikh { get; set; }
+        public string shomareSanad { get; set; }
+        public string variz { get; set; }
+        public Int64 mablagh { get; set; }
+        public string hesab { get; set; }
+     
 
+
+    }
+    class bank
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int ID { get; set; }
+        public string title { get; set; }
+        public string number { get; set; }
+        public string type { get; set; }
+        public string FullName
+        {
+            get
+            {
+                return title + " - " + number ;
+            }
+        }
+    }
+    class check
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int ID { get; set; }
+        public string checkNumber { get; set; }
+        public int   bankID { get; set; }
+        public bool  isUsed { get; set; }
+    }
+    class user
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int ID { get; set; }
+        public string  shomareHesab { get; set; }
+        public string  name { get; set; }
+        public string  pasdari_Code { get; set; }
+        public string  meli_Code { get; set; }
+        public string  phone { get; set; }
+        public string  mobile { get; set; }
+        public string jaygah { get; set; }
+        public string  grade { get; set; }
+        public string  madrak { get; set; }
+        public string  madrak_Title { get; set; }
+        public string univercity_Score { get; set; }
+        public string  univercity { get; set; }
+        public DateTime Sepah_Enterdate { get; set; }
+        public DateTime sazman_Enterdate { get; set; }
+        public string  tahol { get; set; }
+        public string  maskan { get; set; }
+        public string  family_Number { get; set; }
+        
+    }
+ 
+    class bakhsh
+    {
+        [Key]
+     
+        public string   ID { get; set; }
+        public string  title { get; set; }
+        public string masoul { get; set; }
+        public string janeshin { get; set; }
+        public string parent { get; set; }
+        public int final { get; set; }
+        public bool isDone { get; set; }
+        public string master { get; set; }
+        public string changer { get; set; }
+        public DateTime date { get; set; }
+        public TimeSpan time { get; set; }
+    }
+    class markaz
+    {
+        [Key]
+        public string ID { get; set; }
+        public string title { get; set; }
+        public string masoul { get; set; }
+        public string janeshin { get; set; }
+        public string parent { get; set; }
+        public int final { get; set; }
+        public bool isDone { get; set; }
+        public string master { get; set; }
+        public string BakhshID { get; set; }
+        public string changer { get; set; }
+        public DateTime date { get; set; }
+        public TimeSpan time { get; set; }
+    }
+    class komite
+    {
+        [Key]
+        public string ID { get; set; }
+        public string title { get; set; }
+        public string masoul { get; set; }
+        public string janeshin { get; set; }
+        public string parent { get; set; }
+        public int final { get; set; }
+        public bool isDone { get; set; }
+        public string master { get; set; }
+        public string markazID { get; set; }
+        public string changer { get; set; }
+        public DateTime date { get; set; }
+        public TimeSpan time { get; set; }
+    }
     class ejraeiat
     {
         [Key]
@@ -44,7 +180,7 @@ namespace mostaan.Model
         public int riallyP { get; set; }
         public int dollaryN { get; set; }
         public int riallyN { get; set; }
-        public int shenasnameID { get; set; }
+        public string shenasnameID { get; set; }
 
     }
     class sarmaye
@@ -63,7 +199,7 @@ namespace mostaan.Model
         public int vahedND { get; set; }
         public int kollNR { get; set; }
         public int kollND { get; set; }
-        public int shenasnameID { get; set; }
+        public string shenasnameID { get; set; }
         
 
     }
@@ -78,7 +214,7 @@ namespace mostaan.Model
         public int kollPD { get; set; }
         public int kollNR { get; set; }
         public int kollND { get; set; }
-        public int shenasnameID { get; set; }
+        public string shenasnameID { get; set; }
 
     }
     class tashvighi
@@ -89,7 +225,7 @@ namespace mostaan.Model
         public string title { get; set; }
         public int kollPR { get; set; }
         public int kollPD { get; set; }
-        public int shenasnameID { get; set; }
+        public string shenasnameID { get; set; }
     }
     class sayer
     {
@@ -97,11 +233,17 @@ namespace mostaan.Model
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
         public string title { get; set; }
+        public string creatoreCo { get; set; }
+        public int count { get; set; }
+        public int vahedPR { get; set; }
+        public int vahedPD { get; set; }
         public int kollPR { get; set; }
         public int kollPD { get; set; }
+        public int vahedNR { get; set; }
+        public int vahedND { get; set; }
         public int kollNR { get; set; }
         public int kollND { get; set; }
-        public int shenasnameID { get; set; }
+        public string shenasnameID { get; set; }
 
     }
     class omrani
@@ -115,7 +257,7 @@ namespace mostaan.Model
         public int kollPD { get; set; }
         public int kollNR { get; set; }
         public int kollND { get; set; }
-        public int shenasnameID { get; set; }
+        public string shenasnameID { get; set; }
 
     }
     class edari
@@ -128,7 +270,7 @@ namespace mostaan.Model
         public int kollPD { get; set; }
         public int kollNR { get; set; }
         public int kollND { get; set; }
-        public int shenasnameID { get; set; }
+        public string shenasnameID { get; set; }
 
     }
     class masrafi
@@ -147,10 +289,20 @@ namespace mostaan.Model
         public int vahedND { get; set; }
         public int kollNR { get; set; }
         public int kollND { get; set; }
-        public int shenasnameID { get; set; }
+        public string shenasnameID { get; set; }
 
 
     }
+    class archiveDaryafti
+    {
+        public string subject { get; set; }
+        public string shnesnameTitle { get; set; }
+        public DateTime tarikh { get; set; }
+        public string shomareSanad { get; set; }
+        public string variz { get; set; }
+        public Int64 mablagh { get; set; }
+    }
+   
     class archive
     {
         [Key]
@@ -158,23 +310,44 @@ namespace mostaan.Model
         public int ID { get; set; }
         [Display(Name = "موضوع")]
         public string subject { get; set; }
-        public string productType { get; set; }
+        public string   imageName { get; set; }
+        public string shnesnameTitle { get; set; }
         public string rank { get; set; }
         public string markaz { get; set; }
-        public string project { get; set; }
-        public string sanadType { get; set; }
-        public string karfarma { get; set; }
-        public string tarikh { get; set; }
+        public string project { get; set; } // parentID
+        public string type { get; set; }
+        public string radif { get; set; } // radifID
+        public string radifTitle { get; set; }
+        public DateTime tarikh { get; set; }
         public string shomareSanad { get; set; }
         public string variz { get; set; }
-        public string mablagh { get; set; }
+        public Int64 mablagh { get; set; }
         public string hesab { get; set; }
+        public string bankName { get; set; }
+        public string checkNumber { get; set; }
+        public bool  referbish { get; set; }
+        public string  shomareTamin { get; set; }
 
     }
-    
     class shenasname
     {
-        public int ID { get; set; }
+
+        public string bayganiFile { get; set; }
+        public string gharardadFile { get; set; }
+        public string motamamFile { get; set; }
+        public string peyvastFile { get; set; }
+        public string listmavadFile { get; set; }
+        public string gantFile { get; set; }
+        public string mojavezFile { get; set; }
+        public string pishraftFile { get; set; }
+
+
+        public string  comment { get; set; }
+        public string master { get; set; }
+        public string noshke { get; set; }
+        public string changer { get; set; }
+        public string parent { get; set; }
+        public string ID { get; set; }
         public bool isDone { get; set; }
         public string title { get; set; }
         public string hadaf { get; set; }
@@ -182,8 +355,16 @@ namespace mostaan.Model
         public DateTime dateFrom { get; set; }
         public DateTime dateTo { get; set; }
         public DateTime date {get; set;}
+        public string datestring { get; set; }
+        public string datePishbini { get; set; }
+        public TimeSpan time { get; set; }
         public string token { get; set; }
+
         public string markaz { get; set; }
+
+        public string tarah { get; set; }
+        public string status { get; set; }
+
         public int final { get; set; }
         public int DrasmiT { get; set; }
         public int DrasmiHPR { get; set; }
@@ -197,8 +378,6 @@ namespace mostaan.Model
         public int DvazifeT { get; set; }
         public int DvazifeHPR { get; set; }
         public int DvazifeHPD { get; set; }
-
-
         public int FLrasmiT { get; set; }
         public int FLrasmiHPR { get; set; }
         public int FLrasmiHPD { get; set; }
@@ -269,27 +448,22 @@ namespace mostaan.Model
         public virtual List<ejraeiat> ejraeitList { get; set; }
         public virtual List<sarmaye> Sarmayes { get; set; }
         public virtual List<masrafi> Masrafis { get; set; }
+        public virtual List<edari> edaris { get; set; }
+        public virtual List<omrani> omranis { get; set; }
+        public virtual List<gharardad> gharardads { get; set; }
+        public virtual List<sayer> sayers { get; set; }
+        public virtual List<tashvighi> tashvighis { get; set; }
         
 
 
     }
-
-    class markaz
-    {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID { get; set; }
-        public string title { get; set; }
-      
-    }
-
     class markaz_shenasname
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
         public int markazID { get; set; }
-        public int shenasnameID { get; set; }
+        public string shenasnameID { get; set; }
     }
     class shenasnameGam
     {
@@ -302,7 +476,7 @@ namespace mostaan.Model
         public  string duration { get; set; }
         public int darsadeVazni { get; set; }
         public string achivement { get; set; }
-        public int  shenasnameID { get; set; }
+        public string  shenasnameID { get; set; }
     }
 
     class shenasnameFounder
@@ -312,7 +486,7 @@ namespace mostaan.Model
         public int ID { get; set; }
         public string fullname { get; set; }
         public string semat { get; set; }
-        public int shenasnameID { get; set; }
+        public string shenasnameID { get; set; }
 
     }
 

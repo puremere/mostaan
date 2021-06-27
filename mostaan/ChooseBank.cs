@@ -56,16 +56,18 @@ namespace mostaan
             this.CenterToScreen();
         }
 
+        private void Pardakhti_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            PardakhtiReport pardakhtiReport = new PardakhtiReport(dt);
+            pardakhtiReport.Show();
+            
+        }
         private void Daryafti_Click(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            DaryaftiReport daryaftireport = new DaryaftiReport(dt);
-            daryaftireport.Show();
-            
-        }
-
-        private void pardakhti_Click(object sender, EventArgs e)
-        {
+            tamin_Report form = new tamin_Report(dt);
+            form.Show();
 
         }
     }

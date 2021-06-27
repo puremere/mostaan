@@ -67,24 +67,16 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel7)).BeginInit();
-            this.radPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel5)).BeginInit();
-            this.radPanel5.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel8)).BeginInit();
-            this.radPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
-            this.radPanel1.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel6)).BeginInit();
-            this.radPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).BeginInit();
-            this.radPanel2.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel4)).BeginInit();
-            this.radPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel3)).BeginInit();
-            this.radPanel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -140,16 +132,18 @@
             // 
             // radPanel7
             // 
+            this.radPanel7.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.radPanel7.Controls.Add(this.label7);
             this.radPanel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.radPanel7.Location = new System.Drawing.Point(20, 0);
             this.radPanel7.Name = "radPanel7";
             this.radPanel7.Padding = new System.Windows.Forms.Padding(5);
+            // 
+            // 
+            // 
+            this.radPanel7.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 200, 100);
             this.radPanel7.Size = new System.Drawing.Size(132, 42);
             this.radPanel7.TabIndex = 0;
-            ((Telerik.WinControls.UI.RadPanelElement)(this.radPanel7.GetChildAt(0))).BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(143)))), ((int)(((byte)(228)))));
-            ((Telerik.WinControls.UI.RadPanelElement)(this.radPanel7.GetChildAt(0))).Padding = new System.Windows.Forms.Padding(5);
-            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanel7.GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(90)))), ((int)(((byte)(222)))));
             // 
             // vahedrially
             // 
@@ -160,6 +154,9 @@
             this.vahedrially.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.vahedrially.Size = new System.Drawing.Size(206, 13);
             this.vahedrially.TabIndex = 1;
+            this.vahedrially.Text = "0";
+            this.vahedrially.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.vahedrially.Leave += new System.EventHandler(this.vahedrially_Leave);
             this.vahedrially.Validating += new System.ComponentModel.CancelEventHandler(this.isDigit);
             // 
             // radPanel5
@@ -169,10 +166,12 @@
             this.radPanel5.Location = new System.Drawing.Point(5, 5);
             this.radPanel5.Name = "radPanel5";
             this.radPanel5.Padding = new System.Windows.Forms.Padding(7, 3, 7, 3);
+            // 
+            // 
+            // 
+            this.radPanel5.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 200, 100);
             this.radPanel5.Size = new System.Drawing.Size(220, 34);
             this.radPanel5.TabIndex = 10;
-            ((Telerik.WinControls.UI.RadPanelElement)(this.radPanel5.GetChildAt(0))).Padding = new System.Windows.Forms.Padding(7, 3, 7, 3);
-            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanel5.GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(111)))), ((int)(((byte)(114)))));
             // 
             // count
             // 
@@ -183,6 +182,8 @@
             this.count.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.count.Size = new System.Drawing.Size(204, 13);
             this.count.TabIndex = 1;
+            this.count.Text = "0";
+            this.count.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.count.Validating += new System.ComponentModel.CancelEventHandler(this.isDigit);
             // 
             // panel10
@@ -202,20 +203,25 @@
             this.radPanel8.Location = new System.Drawing.Point(5, 5);
             this.radPanel8.Name = "radPanel8";
             this.radPanel8.Padding = new System.Windows.Forms.Padding(7, 3, 7, 3);
+            // 
+            // 
+            // 
+            this.radPanel8.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 200, 100);
             this.radPanel8.Size = new System.Drawing.Size(218, 42);
             this.radPanel8.TabIndex = 10;
-            ((Telerik.WinControls.UI.RadPanelElement)(this.radPanel8.GetChildAt(0))).Padding = new System.Windows.Forms.Padding(7, 3, 7, 3);
-            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanel8.GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(111)))), ((int)(((byte)(114)))));
             // 
             // kolrially
             // 
             this.kolrially.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.kolrially.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kolrially.Enabled = false;
             this.kolrially.Location = new System.Drawing.Point(7, 3);
             this.kolrially.Name = "kolrially";
             this.kolrially.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.kolrially.Size = new System.Drawing.Size(204, 13);
             this.kolrially.TabIndex = 1;
+            this.kolrially.Text = "0";
+            this.kolrially.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.kolrially.Validating += new System.ComponentModel.CancelEventHandler(this.isDigit);
             // 
             // radPanel1
@@ -225,10 +231,12 @@
             this.radPanel1.Location = new System.Drawing.Point(5, 5);
             this.radPanel1.Name = "radPanel1";
             this.radPanel1.Padding = new System.Windows.Forms.Padding(7, 3, 7, 3);
+            // 
+            // 
+            // 
+            this.radPanel1.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 200, 100);
             this.radPanel1.Size = new System.Drawing.Size(218, 34);
             this.radPanel1.TabIndex = 10;
-            ((Telerik.WinControls.UI.RadPanelElement)(this.radPanel1.GetChildAt(0))).Padding = new System.Windows.Forms.Padding(7, 3, 7, 3);
-            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanel1.GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(111)))), ((int)(((byte)(114)))));
             // 
             // title
             // 
@@ -258,10 +266,12 @@
             this.radPanel6.Location = new System.Drawing.Point(5, 5);
             this.radPanel6.Name = "radPanel6";
             this.radPanel6.Padding = new System.Windows.Forms.Padding(7, 3, 7, 3);
+            // 
+            // 
+            // 
+            this.radPanel6.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 200, 100);
             this.radPanel6.Size = new System.Drawing.Size(218, 42);
             this.radPanel6.TabIndex = 10;
-            ((Telerik.WinControls.UI.RadPanelElement)(this.radPanel6.GetChildAt(0))).Padding = new System.Windows.Forms.Padding(7, 3, 7, 3);
-            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanel6.GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(111)))), ((int)(((byte)(114)))));
             // 
             // vaheddollary
             // 
@@ -272,6 +282,9 @@
             this.vaheddollary.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.vaheddollary.Size = new System.Drawing.Size(204, 13);
             this.vaheddollary.TabIndex = 1;
+            this.vaheddollary.Text = "0";
+            this.vaheddollary.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.vaheddollary.Leave += new System.EventHandler(this.vaheddollary_Leave);
             this.vaheddollary.Validating += new System.ComponentModel.CancelEventHandler(this.isDigit);
             // 
             // radPanel2
@@ -281,10 +294,12 @@
             this.radPanel2.Location = new System.Drawing.Point(5, 5);
             this.radPanel2.Name = "radPanel2";
             this.radPanel2.Padding = new System.Windows.Forms.Padding(7, 3, 7, 3);
+            // 
+            // 
+            // 
+            this.radPanel2.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 200, 100);
             this.radPanel2.Size = new System.Drawing.Size(218, 34);
             this.radPanel2.TabIndex = 11;
-            ((Telerik.WinControls.UI.RadPanelElement)(this.radPanel2.GetChildAt(0))).Padding = new System.Windows.Forms.Padding(7, 3, 7, 3);
-            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanel2.GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(111)))), ((int)(((byte)(114)))));
             // 
             // panel6
             // 
@@ -303,20 +318,25 @@
             this.radPanel4.Location = new System.Drawing.Point(5, 5);
             this.radPanel4.Name = "radPanel4";
             this.radPanel4.Padding = new System.Windows.Forms.Padding(7, 3, 7, 3);
+            // 
+            // 
+            // 
+            this.radPanel4.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 200, 100);
             this.radPanel4.Size = new System.Drawing.Size(218, 42);
             this.radPanel4.TabIndex = 10;
-            ((Telerik.WinControls.UI.RadPanelElement)(this.radPanel4.GetChildAt(0))).Padding = new System.Windows.Forms.Padding(7, 3, 7, 3);
-            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanel4.GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(111)))), ((int)(((byte)(114)))));
             // 
             // koldollary
             // 
             this.koldollary.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.koldollary.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.koldollary.Enabled = false;
             this.koldollary.Location = new System.Drawing.Point(7, 3);
             this.koldollary.Name = "koldollary";
             this.koldollary.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.koldollary.Size = new System.Drawing.Size(204, 13);
             this.koldollary.TabIndex = 1;
+            this.koldollary.Text = "0";
+            this.koldollary.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.koldollary.Validating += new System.ComponentModel.CancelEventHandler(this.isDigit);
             // 
             // Ctitle
@@ -337,10 +357,12 @@
             this.radPanel3.Location = new System.Drawing.Point(5, 5);
             this.radPanel3.Name = "radPanel3";
             this.radPanel3.Padding = new System.Windows.Forms.Padding(7, 3, 7, 3);
+            // 
+            // 
+            // 
+            this.radPanel3.RootElement.ControlBounds = new System.Drawing.Rectangle(0, 0, 200, 100);
             this.radPanel3.Size = new System.Drawing.Size(218, 34);
             this.radPanel3.TabIndex = 10;
-            ((Telerik.WinControls.UI.RadPanelElement)(this.radPanel3.GetChildAt(0))).Padding = new System.Windows.Forms.Padding(7, 3, 7, 3);
-            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanel3.GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(111)))), ((int)(((byte)(114)))));
             // 
             // panel5
             // 
@@ -540,31 +562,16 @@
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel7)).EndInit();
-            this.radPanel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radPanel5)).EndInit();
-            this.radPanel5.ResumeLayout(false);
-            this.radPanel5.PerformLayout();
             this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radPanel8)).EndInit();
-            this.radPanel8.ResumeLayout(false);
-            this.radPanel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).EndInit();
-            this.radPanel1.ResumeLayout(false);
-            this.radPanel1.PerformLayout();
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radPanel6)).EndInit();
-            this.radPanel6.ResumeLayout(false);
-            this.radPanel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).EndInit();
-            this.radPanel2.ResumeLayout(false);
-            this.radPanel2.PerformLayout();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radPanel4)).EndInit();
-            this.radPanel4.ResumeLayout(false);
-            this.radPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel3)).EndInit();
-            this.radPanel3.ResumeLayout(false);
-            this.radPanel3.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

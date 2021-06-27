@@ -122,7 +122,7 @@ namespace mostaan
             label10.Font = GlobalVariable.headerlistFONTsupecSmall;
             label11.Font = GlobalVariable.headerlistFONTsupecSmall;
 
-            if (GlobalVariable.shenasnameID != 0)
+            if (GlobalVariable.shenasnameID != "")
             {
                 Model.shenasname item = dbcontext.shenasnames.FirstOrDefault(x => x.ID == GlobalVariable.shenasnameID);
 
@@ -217,88 +217,88 @@ namespace mostaan
 
         private void label18_Click(object sender, EventArgs e)
         {
-            int id = GlobalVariable.shenasnameID;
+            string id = GlobalVariable.shenasnameID;
             Model.shenasname item = dbcontext.shenasnames.FirstOrDefault(x => x.ID == id);
-
-            try
+            if (item.final != 1)
             {
-                item.DrasmiT = Int32.Parse(DrasmiT.Text);
-                item.DrasmiHPR = Int32.Parse(DrasmiHPR.Text);
-                item.DrasmiHPD = Int32.Parse(DrasmiHPD.Text);
-                item.DgharartamamT = Int32.Parse(DgharartamamT.Text);
-                item.DgharartamamHPR = Int32.Parse(DgharartamamHPR.Text);
-                item.DgharartamamHPD = Int32.Parse(DgharartamamHPD.Text);
-                item.DghararsaatT = Int32.Parse(DghararsaatT.Text);
-                item.DghararsaatHPR = Int32.Parse(DghararsaatHPR.Text);
-                item.DghararsaatHPD = Int32.Parse(DghararsaatHPD.Text);
-                item.DvazifeT = Int32.Parse(DvazifeT.Text);
-                item.DvazifeHPR = Int32.Parse(DvazifeHPR.Text);
-                item.DvazifeHPD = Int32.Parse(DvazifeHPD.Text);
+                try
+                {
+                    item.DrasmiT = Int32.Parse(DrasmiT.Text);
+                    item.DrasmiHPR = Int32.Parse(DrasmiHPR.Text);
+                    item.DrasmiHPD = Int32.Parse(DrasmiHPD.Text);
+                    item.DgharartamamT = Int32.Parse(DgharartamamT.Text);
+                    item.DgharartamamHPR = Int32.Parse(DgharartamamHPR.Text);
+                    item.DgharartamamHPD = Int32.Parse(DgharartamamHPD.Text);
+                    item.DghararsaatT = Int32.Parse(DghararsaatT.Text);
+                    item.DghararsaatHPR = Int32.Parse(DghararsaatHPR.Text);
+                    item.DghararsaatHPD = Int32.Parse(DghararsaatHPD.Text);
+                    item.DvazifeT = Int32.Parse(DvazifeT.Text);
+                    item.DvazifeHPR = Int32.Parse(DvazifeHPR.Text);
+                    item.DvazifeHPD = Int32.Parse(DvazifeHPD.Text);
 
-                item.ZDirasmiT = Int32.Parse(ZDirasmiT.Text);
-                item.ZDirasmiHPR = Int32.Parse(ZDirasmiTHPR.Text);
-                item.ZDirasmiHPD = Int32.Parse(ZDirasmiHPD.Text);
-                item.ZDigharartamamT = Int32.Parse(ZDigharartamamT.Text);
-                item.ZDigharartamamHPR = Int32.Parse(ZDigharartamamHPR.Text);
-                item.ZDigharartamamHPD = Int32.Parse(ZDigharartamamHPD.Text);
-                item.ZDighararsaatT = Int32.Parse(ZDighararsaatT.Text);
-                item.ZDighararsaatHPR = Int32.Parse(ZDighararsaatHPR.Text);
-                item.ZDighararsaatHPD = Int32.Parse(ZDighararsaatHPD.Text);
-                item.ZDivazifeT = Int32.Parse(ZDivazifeT.Text);
-                item.ZDivazifeHPR = Int32.Parse(ZDivazifeHPR.Text);
-                item.ZDivazifeHPD = Int32.Parse(ZDivazifeHPD.Text);
+                    item.ZDirasmiT = Int32.Parse(ZDirasmiT.Text);
+                    item.ZDirasmiHPR = Int32.Parse(ZDirasmiTHPR.Text != "" ? ZDirasmiTHPR.Text : "0");
+                    item.ZDirasmiHPD = Int32.Parse(ZDirasmiHPD.Text);
+                    item.ZDigharartamamT = Int32.Parse(ZDigharartamamT.Text);
+                    item.ZDigharartamamHPR = Int32.Parse(ZDigharartamamHPR.Text);
+                    item.ZDigharartamamHPD = Int32.Parse(ZDigharartamamHPD.Text);
+                    item.ZDighararsaatT = Int32.Parse(ZDighararsaatT.Text);
+                    item.ZDighararsaatHPR = Int32.Parse(ZDighararsaatHPR.Text);
+                    item.ZDighararsaatHPD = Int32.Parse(ZDighararsaatHPD.Text);
+                    item.ZDivazifeT = Int32.Parse(ZDivazifeT.Text);
+                    item.ZDivazifeHPR = Int32.Parse(ZDivazifeHPR.Text);
+                    item.ZDivazifeHPD = Int32.Parse(ZDivazifeHPD.Text);
 
-                item.LrasmiT = Int32.Parse(LrasmiT.Text);
-                item.LrasmiHPR = Int32.Parse(LrasmiHPR.Text);
-                item.LrasmiHPD = Int32.Parse(LrasmiHPD.Text);
-                item.LgharartamamT = Int32.Parse(LgharartamamT.Text);
-                item.LgharartamamHPR = Int32.Parse(LgharartamamHPR.Text);
-                item.LgharartamamHPD = Int32.Parse(LgharartamamHPD.Text);
-                item.LghararsaatT = Int32.Parse(LghararsaatT.Text);
-                item.LghararsaatHPR = Int32.Parse(LghararsaatHPR.Text);
-                item.LghararsaatHPD = Int32.Parse(LghararsaatHPD.Text);
-                item.LvazifeT = Int32.Parse(LvazifeT.Text);
-                item.LvazifeHPR = Int32.Parse(LvazifeHPR.Text);
-                item.LvazifeHPD = Int32.Parse(LvazifeHPD.Text);
+                    item.LrasmiT = Int32.Parse(LrasmiT.Text);
+                    item.LrasmiHPR = Int32.Parse(LrasmiHPR.Text);
+                    item.LrasmiHPD = Int32.Parse(LrasmiHPD.Text);
+                    item.LgharartamamT = Int32.Parse(LgharartamamT.Text);
+                    item.LgharartamamHPR = Int32.Parse(LgharartamamHPR.Text);
+                    item.LgharartamamHPD = Int32.Parse(LgharartamamHPD.Text);
+                    item.LghararsaatT = Int32.Parse(LghararsaatT.Text);
+                    item.LghararsaatHPR = Int32.Parse(LghararsaatHPR.Text);
+                    item.LghararsaatHPD = Int32.Parse(LghararsaatHPD.Text);
+                    item.LvazifeT = Int32.Parse(LvazifeT.Text);
+                    item.LvazifeHPR = Int32.Parse(LvazifeHPR.Text);
+                    item.LvazifeHPD = Int32.Parse(LvazifeHPD.Text);
 
-                item.DirasmiT = Int32.Parse(DirasmiT.Text);
-                item.DirasmiHPR = Int32.Parse(DirasmiHPR.Text);
-                item.DirasmiHPD = Int32.Parse(DirasmiHPD.Text);
-                item.DigharartamamT = Int32.Parse(DigharartamamT.Text);
-                item.DigharartamamHPR = Int32.Parse(DigharartamamHPR.Text);
-                item.DigharartamamHPD = Int32.Parse(DigharartamamHPD.Text);
-                item.DighararsaatT = Int32.Parse(DighararsaatT.Text);
-                item.DighararsaatHPR = Int32.Parse(DighararsaatHPR.Text);
-                item.DighararsaatHPD = Int32.Parse(DighararsaatHPD.Text);
-                item.DivazifeT = Int32.Parse(DivazifeT.Text);
-                item.DivazifeHPR = Int32.Parse(DivazifeHPR.Text);
-                item.DivazifeHPD = Int32.Parse(DivazifeHPD.Text);
+                    item.DirasmiT = Int32.Parse(DirasmiT.Text);
+                    item.DirasmiHPR = Int32.Parse(DirasmiHPR.Text);
+                    item.DirasmiHPD = Int32.Parse(DirasmiHPD.Text);
+                    item.DigharartamamT = Int32.Parse(DigharartamamT.Text);
+                    item.DigharartamamHPR = Int32.Parse(DigharartamamHPR.Text);
+                    item.DigharartamamHPD = Int32.Parse(DigharartamamHPD.Text);
+                    item.DighararsaatT = Int32.Parse(DighararsaatT.Text);
+                    item.DighararsaatHPR = Int32.Parse(DighararsaatHPR.Text);
+                    item.DighararsaatHPD = Int32.Parse(DighararsaatHPD.Text);
+                    item.DivazifeT = Int32.Parse(DivazifeT.Text);
+                    item.DivazifeHPR = Int32.Parse(DivazifeHPR.Text);
+                    item.DivazifeHPD = Int32.Parse(DivazifeHPD.Text);
 
-                item.FLrasmiT = Int32.Parse(FLrasmiT.Text);
-                item.FLrasmiHPR = Int32.Parse(FLrasmiHPR.Text);
-                item.FLrasmiHPD = Int32.Parse(FLrasmiHPD.Text);
-                item.FLgharartamamT = Int32.Parse(FLgharartamamT.Text);
-                item.FLgharartamamHPR = Int32.Parse(FLgharartamamHPR.Text);
-                item.FLgharartamamHPD = Int32.Parse(FLgharartamamHPD.Text);
-                item.FLghararsaatT = Int32.Parse(FLghararsaatT.Text);
-                item.FLghararsaatHPR = Int32.Parse(FLghararsaatHPR.Text);
-                item.FLghararsaatHPD = Int32.Parse(FLghararsaatHPD.Text);
-                item.FLvazifeT = Int32.Parse(FLvazifeT.Text);
-                item.FLvazifeHPR = Int32.Parse(FLvazifeHPR.Text);
-                item.FLvazifeHPD = Int32.Parse(FLvazifeHPD.Text);
+                    item.FLrasmiT = Int32.Parse(FLrasmiT.Text);
+                    item.FLrasmiHPR = Int32.Parse(FLrasmiHPR.Text);
+                    item.FLrasmiHPD = Int32.Parse(FLrasmiHPD.Text);
+                    item.FLgharartamamT = Int32.Parse(FLgharartamamT.Text);
+                    item.FLgharartamamHPR = Int32.Parse(FLgharartamamHPR.Text);
+                    item.FLgharartamamHPD = Int32.Parse(FLgharartamamHPD.Text);
+                    item.FLghararsaatT = Int32.Parse(FLghararsaatT.Text);
+                    item.FLghararsaatHPR = Int32.Parse(FLghararsaatHPR.Text);
+                    item.FLghararsaatHPD = Int32.Parse(FLghararsaatHPD.Text);
+                    item.FLvazifeT = Int32.Parse(FLvazifeT.Text);
+                    item.FLvazifeHPR = Int32.Parse(FLvazifeHPR.Text);
+                    item.FLvazifeHPD = Int32.Parse(FLvazifeHPD.Text);
 
-                dbcontext.SaveChanges();
-                this.Hide();
-                Form9_money_sarmaye form9 = new Form9_money_sarmaye();
-                form9.Show();
-                this.Hide();
+                    dbcontext.SaveChanges();
+                    this.Hide();
+                   
+                }
+                catch
+                {
+                }
             }
-            catch
-            {
-                Form9_money_sarmaye form9 = new Form9_money_sarmaye();
-                form9.Show();
-                this.Hide();
-            }
+            Form9_money_sarmaye form9 = new Form9_money_sarmaye();
+            form9.Show();
+            this.Hide();
 
 
 
@@ -417,5 +417,21 @@ namespace mostaan
                 messageLable.Text = "";
             }
         }
+
+        private void label77_Click(object sender, EventArgs e)
+        {
+            Form6_PMainMoney form = new Form6_PMainMoney();
+            form.Show();
+            this.Hide();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            comment form = new comment();
+            form.Show();
+            this.Hide();
+        }
+
+      
     }
 }

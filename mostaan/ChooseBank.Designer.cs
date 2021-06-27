@@ -113,9 +113,9 @@
             this.pardakhti.Name = "pardakhti";
             this.pardakhti.Size = new System.Drawing.Size(161, 62);
             this.pardakhti.TabIndex = 0;
-            this.pardakhti.Text = "پرداختی";
+            this.pardakhti.Text = "صدور چک";
             this.pardakhti.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.pardakhti.Click += new System.EventHandler(this.pardakhti_Click);
+            this.pardakhti.Click += new System.EventHandler(this.Pardakhti_Click);
             // 
             // panle1
             // 
@@ -139,7 +139,7 @@
             this.Daryafti.Name = "Daryafti";
             this.Daryafti.Size = new System.Drawing.Size(161, 62);
             this.Daryafti.TabIndex = 0;
-            this.Daryafti.Text = "دریافتی";
+            this.Daryafti.Text = "تامین";
             this.Daryafti.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Daryafti.Click += new System.EventHandler(this.Daryafti_Click);
             // 

@@ -5313,11 +5313,6 @@
             Gets a collection with all the currently attached <see cref="T:Telerik.WinControls.UI.Docking.DockWindow">DockWindow</see> instances.
             </summary>
         </member>
-        <member name="P:Telerik.WinControls.UI.Docking.RadDock.Text">
-            <summary>
-            This property is not relevant for this class.
-            </summary>
-        </member>
         <member name="P:Telerik.WinControls.UI.Docking.RadDock.ShowDocumentCloseButton">
             <summary>
             Determines whether DocumentTabStrip instances will display a Close Button next to each item.

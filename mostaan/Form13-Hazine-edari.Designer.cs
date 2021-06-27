@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form13_Hazine_edari));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label8 = new System.Windows.Forms.Label();
             this.panelNum2 = new Telerik.WinControls.UI.RadPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -76,8 +76,8 @@
             this.radPanel14 = new Telerik.WinControls.UI.RadPanel();
             this.label18 = new System.Windows.Forms.Label();
             this.panelNum1 = new Telerik.WinControls.UI.RadPanel();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.PanelContainer = new Telerik.WinControls.UI.RadScrollablePanelContainer();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelNum2)).BeginInit();
             this.panelNum2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -217,7 +217,7 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // radScrollablePanel1
+            // radscrollpanel2
             // 
             this.radScrollablePanel1.AllowAutomaticScrollToControl = false;
             this.radScrollablePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -225,7 +225,7 @@
             this.radScrollablePanel1.Name = "radScrollablePanel1";
             this.radScrollablePanel1.Padding = new System.Windows.Forms.Padding(0);
             // 
-            // radScrollablePanel1.PanelContainer
+            // radscrollpanel2.PanelContainer
             // 
             this.radScrollablePanel1.PanelContainer.Controls.Add(this.dataGridView1);
             this.radScrollablePanel1.PanelContainer.Location = new System.Drawing.Point(0, 0);
@@ -241,14 +241,14 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Del});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Location = new System.Drawing.Point(-39, 31);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -322,6 +322,7 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "نظرات مدیر پروژه";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel3
             // 
@@ -346,6 +347,7 @@
             this.radpanel0.TabIndex = 0;
             this.radpanel0.Text = "هزینه های پیش بینی شده";
             this.radpanel0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radpanel0.Click += new System.EventHandler(this.radpanel0_Click);
             // 
             // panel2
             // 
@@ -427,7 +429,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(101, 37);
             this.label10.TabIndex = 0;
-            this.label10.Text = "سایر هزینه ها";
+            this.label10.Text = "مواد اولیه";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
@@ -762,19 +764,19 @@
             this.panelNum1.TabIndex = 11;
             ((Telerik.WinControls.UI.RadPanelElement)(this.panelNum1.GetChildAt(0))).Padding = new System.Windows.Forms.Padding(5);
             // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "حذف";
-            this.dataGridViewImageColumn1.Image = global::mostaan.Properties.Resources.del2;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            // 
             // PanelContainer
             // 
             this.PanelContainer.AutoScroll = false;
             this.PanelContainer.Dock = System.Windows.Forms.DockStyle.None;
             this.PanelContainer.Location = new System.Drawing.Point(0, 0);
             this.PanelContainer.Size = new System.Drawing.Size(1158, 274);
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "حذف";
+            this.dataGridViewImageColumn1.Image = global::mostaan.Properties.Resources.del2;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
             // 
             // Form13_Hazine_edari
             // 

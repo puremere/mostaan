@@ -137,5 +137,17 @@ namespace mostaan
                 messageLable.Text = "";
             }
         }
+
+        private void vahedrially_Leave(object sender, EventArgs e)
+        {
+            kolrially.Text = (Int32.Parse(vahedrially.Text) * Int32.Parse(count.Text)).ToString();
+
+        }
+
+        private void vaheddollary_Leave(object sender, EventArgs e)
+        {
+            koldollary.Text = (Int32.Parse(vaheddollary.Text) * Int32.Parse(count.Text)).ToString();
+
+        }
     }
 }

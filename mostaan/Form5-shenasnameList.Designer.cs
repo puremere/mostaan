@@ -29,18 +29,19 @@
         private void InitializeComponent()
         {
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
-            this.radVScrollBar1 = new Telerik.WinControls.UI.RadVScrollBar();
-            this.panelHolder = new Telerik.WinControls.UI.RadPanel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.noskheha = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.edit = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radVScrollBar1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelHolder)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // radPanel1
             // 
             this.radPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.radPanel1.Controls.Add(this.radVScrollBar1);
+            this.radPanel1.Controls.Add(this.dataGridView1);
             this.radPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radPanel1.Location = new System.Drawing.Point(0, 0);
             this.radPanel1.Name = "radPanel1";
@@ -50,32 +51,35 @@
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.radPanel1.GetChildAt(0).GetChildAt(0))).BackColor = System.Drawing.Color.Transparent;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanel1.GetChildAt(0).GetChildAt(1))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
             // 
-            // radVScrollBar1
+            // dataGridView1
             // 
-            this.radVScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.radVScrollBar1.Location = new System.Drawing.Point(947, 0);
-            this.radVScrollBar1.MinThumbLength = 60;
-            this.radVScrollBar1.Name = "radVScrollBar1";
-            this.radVScrollBar1.Size = new System.Drawing.Size(17, 602);
-            this.radVScrollBar1.SmallChange = 10;
-            this.radVScrollBar1.TabIndex = 0;
-            this.radVScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.radVScrollBar1_Scroll);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.noskheha,
+            this.delete,
+            this.edit});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dataGridView1.Size = new System.Drawing.Size(964, 602);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // panelHolder
+            // noskheha
             // 
-            this.panelHolder.BackColor = System.Drawing.Color.Transparent;
-            this.panelHolder.Location = new System.Drawing.Point(12, 12);
-            this.panelHolder.Name = "panelHolder";
-            
-            this.panelHolder.Size = new System.Drawing.Size(929, 587);
-            this.panelHolder.TabIndex = 1;
-            ((Telerik.WinControls.UI.RadPanelElement)(this.panelHolder.GetChildAt(0))).Padding = new System.Windows.Forms.Padding(0, 0, 20, 0);
-            ((Telerik.WinControls.Primitives.FillPrimitive)(this.panelHolder.GetChildAt(0).GetChildAt(0))).BackColor2 = System.Drawing.Color.Transparent;
-            ((Telerik.WinControls.Primitives.FillPrimitive)(this.panelHolder.GetChildAt(0).GetChildAt(0))).BackColor3 = System.Drawing.Color.Transparent;
-            ((Telerik.WinControls.Primitives.FillPrimitive)(this.panelHolder.GetChildAt(0).GetChildAt(0))).BackColor4 = System.Drawing.Color.Transparent;
-            ((Telerik.WinControls.Primitives.FillPrimitive)(this.panelHolder.GetChildAt(0).GetChildAt(0))).GradientStyle = Telerik.WinControls.GradientStyles.Linear;
-            ((Telerik.WinControls.Primitives.FillPrimitive)(this.panelHolder.GetChildAt(0).GetChildAt(0))).BackColor = System.Drawing.Color.Transparent;
-            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.panelHolder.GetChildAt(0).GetChildAt(1))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+            this.noskheha.HeaderText = "مشاهده نسخه ها";
+            this.noskheha.Name = "noskheha";
+            // 
+            // delete
+            // 
+            this.delete.HeaderText = "حذف";
+            this.delete.Name = "delete";
+            // 
+            // edit
+            // 
+            this.edit.HeaderText = "ویرایش";
+            this.edit.Name = "edit";
             // 
             // Form5_shenasnameList
             // 
@@ -83,14 +87,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(964, 602);
-            this.Controls.Add(this.panelHolder);
             this.Controls.Add(this.radPanel1);
+            this.DoubleBuffered = true;
             this.Name = "Form5_shenasnameList";
             this.Text = "Form5_shenasnameList";
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).EndInit();
             this.radPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radVScrollBar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelHolder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -98,7 +101,9 @@
         #endregion
 
         private Telerik.WinControls.UI.RadPanel radPanel1;
-        private Telerik.WinControls.UI.RadVScrollBar radVScrollBar1;
-        private Telerik.WinControls.UI.RadPanel panelHolder;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewButtonColumn noskheha;
+        private System.Windows.Forms.DataGridViewButtonColumn delete;
+        private System.Windows.Forms.DataGridViewButtonColumn edit;
     }
 }

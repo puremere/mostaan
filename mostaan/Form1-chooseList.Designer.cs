@@ -113,7 +113,7 @@
             this.shenasnameAdd.Name = "shenasnameAdd";
             this.shenasnameAdd.Size = new System.Drawing.Size(161, 62);
             this.shenasnameAdd.TabIndex = 0;
-            this.shenasnameAdd.Text = "افزودن شناسنامه جدید";
+            this.shenasnameAdd.Text = "افزودن پروژه جدید";
             this.shenasnameAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.shenasnameAdd.Click += new System.EventHandler(this.shenasnameAdd_Click);
             // 
@@ -139,7 +139,7 @@
             this.shenasnameList.Name = "shenasnameList";
             this.shenasnameList.Size = new System.Drawing.Size(161, 62);
             this.shenasnameList.TabIndex = 0;
-            this.shenasnameList.Text = "لیست شناسنامه ها";
+            this.shenasnameList.Text = "لیست پروژه ها";
             this.shenasnameList.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.shenasnameList.Click += new System.EventHandler(this.shenasnameList_Click);
             // 
@@ -152,6 +152,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1_chooseList";
             this.Text = "منو";
+            this.Load += new System.EventHandler(this.Form1_chooseList_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panle2)).EndInit();

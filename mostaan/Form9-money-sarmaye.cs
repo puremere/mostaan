@@ -15,7 +15,7 @@ namespace mostaan
     public partial class Form9_money_sarmaye : Form
     {
         Model.Context dbcontext = new Model.Context();
-        int shenasnameID = GlobalVariable.shenasnameID;
+        string shenasnameID = GlobalVariable.shenasnameID;
         public Form9_money_sarmaye()
         {
             InitializeComponent();
@@ -83,7 +83,7 @@ namespace mostaan
             radPanel1.PanelElement.PanelFill.GradientStyle = GradientStyles.Solid;
             radPanel1.PanelElement.PanelFill.BackColor = Color.White;
 
-           
+
 
 
             radPanel13.PanelElement.Shape = new RoundRectShape();
@@ -104,13 +104,13 @@ namespace mostaan
             label10.Font = GlobalVariable.headerlistFONTsupecSmall;
             label11.Font = GlobalVariable.headerlistFONTsupecSmall;
 
-          
+
 
             List<Model.sarmaye> lst = (from p in dbcontext.sarmayes where p.shenasnameID == shenasnameID select p).ToList();
-            List<Model.sarmaye> lst2 = (from p in dbcontext.sarmayes  select p).ToList();
+            List<Model.sarmaye> lst2 = (from p in dbcontext.sarmayes select p).ToList();
             dataGridView1.DataSource = lst;
-            
-           
+
+
 
             foreach (var item in lst)
             {
@@ -122,24 +122,24 @@ namespace mostaan
             dataGridView1.Columns["ID"].Width = 120;
             dataGridView1.Columns["ID"].DisplayIndex = 1;
             dataGridView1.Columns["title"].HeaderText = "نام دستگاه";
-            dataGridView1.Columns["title"].Width = 180 ;
+            dataGridView1.Columns["title"].Width = 180;
             dataGridView1.Columns["title"].DisplayIndex = 2;
             dataGridView1.Columns["creatoreCo"].HeaderText = "شرکت سازنده یا فروشنده";
-            dataGridView1.Columns["creatoreCo"].Width = 180 ;
+            dataGridView1.Columns["creatoreCo"].Width = 180;
             dataGridView1.Columns["creatoreCo"].DisplayIndex = 3;
             dataGridView1.Columns["count"].HeaderText = "تعداد";
-            dataGridView1.Columns["count"].Width = 180 ;
+            dataGridView1.Columns["count"].Width = 180;
             dataGridView1.Columns["count"].DisplayIndex = 4;
             dataGridView1.Columns["vahedPR"].HeaderText = "قیمت واحد پیش بینی ریالی";
             dataGridView1.Columns["vahedPR"].Width = 180;
             dataGridView1.Columns["vahedPR"].DisplayIndex = 5;
             dataGridView1.Columns["vahedNR"].HeaderText = "قیمت واحد نهایی ریالی";
-            dataGridView1.Columns["vahedNR"].Width = 180 ;
+            dataGridView1.Columns["vahedNR"].Width = 180;
             dataGridView1.Columns["vahedNR"].DefaultCellStyle.BackColor = Color.Gray;
             dataGridView1.Columns["vahedNR"].DefaultCellStyle.ForeColor = Color.White;
             dataGridView1.Columns["vahedNR"].DisplayIndex = 6;
             dataGridView1.Columns["vahedPD"].HeaderText = "قیمت واحد پیش بینی دلاری";
-            dataGridView1.Columns["vahedPD"].Width = 180 ;
+            dataGridView1.Columns["vahedPD"].Width = 180;
             dataGridView1.Columns["vahedPD"].DisplayIndex = 7;
             dataGridView1.Columns["vahedND"].HeaderText = "قیمت واحد نهایی دلاری";
             dataGridView1.Columns["vahedND"].Width = 180;
@@ -147,10 +147,10 @@ namespace mostaan
             dataGridView1.Columns["vahedND"].DefaultCellStyle.BackColor = Color.Gray;
             dataGridView1.Columns["vahedND"].DefaultCellStyle.ForeColor = Color.White;
             dataGridView1.Columns["kollPR"].HeaderText = "کل پیش بینی ریالی";
-            dataGridView1.Columns["kollPR"].Width = 180 ;
+            dataGridView1.Columns["kollPR"].Width = 180;
             dataGridView1.Columns["kollPR"].DisplayIndex = 9;
             dataGridView1.Columns["kollNR"].HeaderText = "کل نهایی ریالی";
-            dataGridView1.Columns["kollNR"].Width = 180 ;
+            dataGridView1.Columns["kollNR"].Width = 180;
             dataGridView1.Columns["kollNR"].DisplayIndex = 10;
             dataGridView1.Columns["kollNR"].DefaultCellStyle.BackColor = Color.Gray;
             dataGridView1.Columns["kollNR"].DefaultCellStyle.ForeColor = Color.White;
@@ -158,7 +158,7 @@ namespace mostaan
             dataGridView1.Columns["kollPD"].Width = 180;
             dataGridView1.Columns["kollPD"].DisplayIndex = 11;
             dataGridView1.Columns["kollND"].HeaderText = "کل نهایی دلاری";
-            dataGridView1.Columns["kollND"].Width = 180 ;
+            dataGridView1.Columns["kollND"].Width = 180;
             dataGridView1.Columns["kollND"].DisplayIndex = 12;
             dataGridView1.Columns["kollND"].DefaultCellStyle.BackColor = Color.Gray;
             dataGridView1.Columns["kollND"].DefaultCellStyle.ForeColor = Color.White;
@@ -198,7 +198,7 @@ namespace mostaan
             dataGridView1.Columns[10].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridView1.Columns[11].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridView1.Columns[12].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            
+
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.Gray;
             dataGridView1.EnableHeadersVisualStyles = false;
 
@@ -208,12 +208,17 @@ namespace mostaan
 
         }
 
-      
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Form10_addSarmaye form10 = new Form10_addSarmaye();
-            form10.Show();
+            Model.shenasname item = dbcontext.shenasnames.Where(x => x.ID == GlobalVariable.shenasnameID).FirstOrDefault();
+            if (item.final != 1)
+            {
+                Form10_addSarmaye form10 = new Form10_addSarmaye();
+                form10.Show();
+            }
+
         }
 
         private void label18_Click(object sender, EventArgs e)
@@ -305,31 +310,50 @@ namespace mostaan
         {
             using (var dbcontext = new Model.Context())
             {
-                int iSelectedGridIndex = dataGridView1.CurrentCell.ColumnIndex;
-                if (iSelectedGridIndex != 0)
-                    return;
-                int rowindex = dataGridView1.CurrentCell.RowIndex;
-                string rowID = dataGridView1.Rows[rowindex].Cells[1].Value.ToString();
-
-                Model.sarmaye model = dbcontext.sarmayes.SingleOrDefault(x => x.title == rowID && x.shenasnameID == GlobalVariable.shenasnameID);
-                dbcontext.Entry(model).State = EntityState.Deleted;
-                dbcontext.SaveChanges();
-                int index = 0;
-                foreach (Form form in Application.OpenForms)
+                Model.shenasname item = dbcontext.shenasnames.Where(x => x.ID == GlobalVariable.shenasnameID).FirstOrDefault();
+                if (item.final != 1)
                 {
-                    if (form.Name == "Form9_money_sarmaye")
+                    int iSelectedGridIndex = dataGridView1.CurrentCell.ColumnIndex;
+                    if (iSelectedGridIndex != 0)
+                        return;
+                    int rowindex = dataGridView1.CurrentCell.RowIndex;
+                    string rowID = dataGridView1.Rows[rowindex].Cells[2].Value.ToString();
+
+                    Model.sarmaye model = dbcontext.sarmayes.SingleOrDefault(x => x.title == rowID && x.shenasnameID == GlobalVariable.shenasnameID);
+                    dbcontext.Entry(model).State = EntityState.Deleted;
+                    dbcontext.SaveChanges();
+                    int index = 0;
+                    foreach (Form form in Application.OpenForms)
                     {
-                        break;
+                        if (form.Name == "Form9_money_sarmaye")
+                        {
+                            break;
+                        }
+
+                        index += 1;
                     }
+                    this.Hide();
 
-                    index += 1;
+                    Application.OpenForms[index-1].Close();
+                    Form9_money_sarmaye form9 = new Form9_money_sarmaye();
+                    form9.Show();
                 }
-                this.Hide();
 
-                Application.OpenForms[index].Close();
-                Form9_money_sarmaye form9 = new Form9_money_sarmaye();
-                form9.Show();
             }
+        }
+
+        private void radpanel0_Click(object sender, EventArgs e)
+        {
+            Form6_PMainMoney form = new Form6_PMainMoney();
+            form.Show();
+            this.Hide();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            comment form = new comment();
+            form.Show();
+            this.Hide();
         }
     }
 }

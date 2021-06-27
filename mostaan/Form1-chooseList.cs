@@ -16,6 +16,13 @@ namespace mostaan
     public partial class Form1_chooseList : Form
     {
         Model.Context dbcontext = new Model.Context();
+        private static Random random = new Random();
+        public static string RandomString(int length)
+        {
+            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            return new string(Enumerable.Repeat(chars, length)
+              .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
         public Form1_chooseList()
         {
             InitializeComponent();
@@ -31,28 +38,26 @@ namespace mostaan
             panle2.PanelElement.PanelFill.BackColor = Color.Gray;
             this.CenterToScreen();
         }
-
+      
         private void shenasnameAdd_Click(object sender, EventArgs e)
         {
 
 
-           
+            string id = RandomString(10);
             shenasname model = new shenasname();
+            DateTime nowdatetime = DateTime.Now;
             model.token = "123456789";
-            model.final = 0;
-            model.date = DateTime.Now;
+            model.master = "1";
+            model.ID = id;
+            model.parent = id;
+            model.date = nowdatetime;
             model.dateFrom = DateTime.Now;
             model.dateTo = DateTime.Now;
+            model.time = nowdatetime.TimeOfDay;
             dbcontext.shenasnames.Add(model);
             dbcontext.SaveChanges();
-            
-            //model.isFinal = 0;
-            //dbcontext.shenasnames.Add(model);
-            //dbcontext.SaveChanges();
-            int id = dbcontext.shenasnames.ToList().Last().ID;
-
-             GlobalVariable.shenasnameID = id;
-             Form2_shenasnameAdd form = new Form2_shenasnameAdd();
+            GlobalVariable.shenasnameID = id;
+            Form2_shenasnameAdd form = new Form2_shenasnameAdd();
 
             form.Show();
            // this.Hide();
@@ -67,6 +72,11 @@ namespace mostaan
             Form5_shenasnameList form = new Form5_shenasnameList();
             form.Show();
            // this.Hide();
+        }
+
+        private void Form1_chooseList_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

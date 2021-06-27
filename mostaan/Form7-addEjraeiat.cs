@@ -47,6 +47,14 @@ namespace mostaan
 
         private void label7_Click(object sender, EventArgs e)
         {
+            if (title.Text == "" || rially.Text == "" || dollari.Text == "")
+            {
+                messageLable.Text = "تمامی فیلد ها باید پر باشند";
+            }
+            else
+            {
+
+            }
             Model.ejraeiat model = new Model.ejraeiat() {
                 dollaryP = Int32.Parse(dollari.Text),
                 riallyP = Int32.Parse(rially.Text),
@@ -76,18 +84,18 @@ namespace mostaan
 
         private void notEmpty(object sender, CancelEventArgs e)
         {
-            var cnt = sender as TextBox;
-            if (cnt.Text.Count() < 1)
-            {
-                e.Cancel = true;
-                messageLable.Text = "فیلد مورد نظر نباید خالی باشد";
+            //var cnt = sender as TextBox;
+            //if (cnt.Text.Count() < 1)
+            //{
+            //    e.Cancel = true;
+            //    messageLable.Text = "فیلد مورد نظر نباید خالی باشد";
 
 
-            }
-            else
-            {
-                messageLable.Text = "";
-            }
+            //}
+            //else
+            //{
+            //    messageLable.Text = "";
+            //}
         }
 
         private void isDigit(object sender, CancelEventArgs e)

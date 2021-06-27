@@ -17,7 +17,7 @@ namespace mostaan
     {
         public Form21_tashvighi()
         {
-            int shenasnameID = GlobalVariable.shenasnameID;
+            string shenasnameID = GlobalVariable.shenasnameID;
           
             InitializeComponent();
             FontClass fontclass = new FontClass();
@@ -146,7 +146,7 @@ namespace mostaan
            
             dataGridView1.Columns["shenasnameID"].Visible = false;
 
-            // dataGridView1.Columns["ID"].Visible = false;
+            dataGridView1.Columns["ID"].Visible = false;
 
 
 
@@ -183,30 +183,35 @@ namespace mostaan
         {
             using (var dbcontext = new Model.Context())
             {
-                int iSelectedGridIndex = dataGridView1.CurrentCell.ColumnIndex;
-                if (iSelectedGridIndex != 0)
-                    return;
-                int rowindex = dataGridView1.CurrentCell.RowIndex;
-                string rowID = dataGridView1.Rows[rowindex].Cells[2].Value.ToString();
-
-                Model.tashvighi model = dbcontext.tashvighis.SingleOrDefault(x => x.title == rowID);
-                dbcontext.Entry(model).State = EntityState.Deleted;
-                dbcontext.SaveChanges();
-                int index = 0;
-                foreach (Form form in Application.OpenForms)
+                Model.shenasname item = dbcontext.shenasnames.Where(x => x.ID == GlobalVariable.shenasnameID).FirstOrDefault();
+                if (item.final != 1)
                 {
-                    if (form.Name == "Form21_tashvighi")
+                    int iSelectedGridIndex = dataGridView1.CurrentCell.ColumnIndex;
+                    if (iSelectedGridIndex != 0)
+                        return;
+                    int rowindex = dataGridView1.CurrentCell.RowIndex;
+                    string rowID = dataGridView1.Rows[rowindex].Cells[2].Value.ToString();
+
+                    Model.tashvighi model = dbcontext.tashvighis.SingleOrDefault(x => x.title == rowID);
+                    dbcontext.Entry(model).State = EntityState.Deleted;
+                    dbcontext.SaveChanges();
+                    int index = 0;
+                    foreach (Form form in Application.OpenForms)
                     {
-                        break;
+                        if (form.Name == "Form21_tashvighi")
+                        {
+                            break;
+                        }
+
+                        index += 1;
                     }
+                    this.Hide();
 
-                    index += 1;
+                    Application.OpenForms[index].Close();
+                    Form21_tashvighi form13 = new Form21_tashvighi();
+                    form13.Show();
                 }
-                this.Hide();
-
-                Application.OpenForms[index].Close();
-                Form21_tashvighi form13 = new Form21_tashvighi();
-                form13.Show();
+                    
             }
         }
 
@@ -225,23 +230,23 @@ namespace mostaan
             //Form21_tashvighi form = new Form21_tashvighi();
             //form.Show();
             //this.Hide();
-            int shenasnameID = GlobalVariable.shenasnameID;
-            using (var dbcontext = new Model.Context())
-            {
-                shenasname shen = dbcontext.shenasnames.SingleOrDefault(x => x.ID == shenasnameID);
-                shen.isDone = true;
-                dbcontext.SaveChanges();
-            }
-                
+
+            comment comment = new comment();
+            comment.Show();
             this.Hide();
-            Form5_shenasnameList form5 = new Form5_shenasnameList();
-            form5.Show();
+           
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Form22_addTashvighi form = new Form22_addTashvighi();
-            form.Show();
-
+            using (Model.Context dbcontext = new Model.Context())
+            {
+                Model.shenasname item = dbcontext.shenasnames.Where(x => x.ID == GlobalVariable.shenasnameID).FirstOrDefault();
+                if (item.final != 1)
+                {
+                    Form22_addTashvighi form = new Form22_addTashvighi();
+                    form.Show();
+                }
+            }
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -309,6 +314,20 @@ namespace mostaan
         private void label11_Click(object sender, EventArgs e)
         {
             Form21_tashvighi form = new Form21_tashvighi();
+            form.Show();
+            this.Hide();
+        }
+
+        private void radpanel0_Click(object sender, EventArgs e)
+        {
+            Form6_PMainMoney form = new Form6_PMainMoney();
+            form.Show();
+            this.Hide();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            comment form = new comment();
             form.Show();
             this.Hide();
         }

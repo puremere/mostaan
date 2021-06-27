@@ -52,8 +52,6 @@ namespace mostaan
                 kollPD = Int32.Parse(dollari.Text),
                 kollPR = Int32.Parse(rially.Text),
                 title = title.Text,
-                
-                
                 shenasnameID = GlobalVariable.shenasnameID,
 
 

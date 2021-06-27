@@ -16,7 +16,7 @@ namespace mostaan
     {
         public Form19_saryer()
         {
-            int shenasnameID = GlobalVariable.shenasnameID;
+            string shenasnameID = GlobalVariable.shenasnameID;
             InitializeComponent();
             FontClass fontclass = new FontClass();
             List<Control> allControls = fontclass.GetAllControls(this);
@@ -118,35 +118,58 @@ namespace mostaan
 
 
 
-            dataGridView1.Width = 1400;
+            dataGridView1.Width = 2300;
 
             dataGridView1.Columns["ID"].HeaderText = "ردیف";
             dataGridView1.Columns["ID"].Width = 120;
             dataGridView1.Columns["ID"].DisplayIndex = 1;
-            dataGridView1.Columns["title"].HeaderText = "شرح هزینه";
-            dataGridView1.Columns["title"].Width = 216;
+            dataGridView1.Columns["title"].HeaderText = "نام دستگاه";
+            dataGridView1.Columns["title"].Width = 180;
             dataGridView1.Columns["title"].DisplayIndex = 2;
             dataGridView1.Columns["title"].DefaultCellStyle.Font = GlobalVariable.headerlistFONTsupecSmall;
+            dataGridView1.Columns["creatoreCo"].HeaderText = "شرکت سازنده یا فروشنده";
+            dataGridView1.Columns["creatoreCo"].Width = 180;
+            dataGridView1.Columns["creatoreCo"].DisplayIndex = 3;
+            dataGridView1.Columns["creatoreCo"].DefaultCellStyle.Font = GlobalVariable.headerlistFONTsupecSmall;
+
+            dataGridView1.Columns["count"].HeaderText = "تعداد";
+            dataGridView1.Columns["count"].Width = 180;
+            dataGridView1.Columns["count"].DisplayIndex = 4;
+
+            dataGridView1.Columns["vahedPR"].HeaderText = "قیمت واحد پیش بینی ریالی";
+            dataGridView1.Columns["vahedPR"].Width = 180;
+            dataGridView1.Columns["vahedPR"].DisplayIndex = 5;
+            dataGridView1.Columns["vahedNR"].HeaderText = "قیمت واحد نهایی ریالی";
+            dataGridView1.Columns["vahedNR"].Width = 180;
+            dataGridView1.Columns["vahedNR"].DefaultCellStyle.BackColor = Color.Gray;
+            dataGridView1.Columns["vahedNR"].DefaultCellStyle.ForeColor = Color.White;
+            dataGridView1.Columns["vahedNR"].DisplayIndex = 6;
+            dataGridView1.Columns["vahedPD"].HeaderText = "قیمت واحد پیش بینی دلاری";
+            dataGridView1.Columns["vahedPD"].Width = 180;
+            dataGridView1.Columns["vahedPD"].DisplayIndex = 7;
+            dataGridView1.Columns["vahedND"].HeaderText = "قیمت واحد نهایی دلاری";
+            dataGridView1.Columns["vahedND"].Width = 180;
+            dataGridView1.Columns["vahedND"].DisplayIndex = 8;
+            dataGridView1.Columns["vahedND"].DefaultCellStyle.BackColor = Color.Gray;
+            dataGridView1.Columns["vahedND"].DefaultCellStyle.ForeColor = Color.White;
             dataGridView1.Columns["kollPR"].HeaderText = "کل پیش بینی ریالی";
-            dataGridView1.Columns["kollPR"].Width = 216;
-            dataGridView1.Columns["kollPR"].DisplayIndex = 4;
+            dataGridView1.Columns["kollPR"].Width = 180;
+            dataGridView1.Columns["kollPR"].DisplayIndex = 9;
             dataGridView1.Columns["kollNR"].HeaderText = "کل نهایی ریالی";
-            dataGridView1.Columns["kollNR"].Width = 216;
-            dataGridView1.Columns["kollNR"].DisplayIndex = 5;
+            dataGridView1.Columns["kollNR"].Width = 180;
+            dataGridView1.Columns["kollNR"].DisplayIndex = 10;
             dataGridView1.Columns["kollNR"].DefaultCellStyle.BackColor = Color.Gray;
             dataGridView1.Columns["kollNR"].DefaultCellStyle.ForeColor = Color.White;
             dataGridView1.Columns["kollPD"].HeaderText = "کل پیش بینی دلاری";
-            dataGridView1.Columns["kollPD"].Width = 216;
-            dataGridView1.Columns["kollPD"].DisplayIndex = 6;
+            dataGridView1.Columns["kollPD"].Width = 180;
+            dataGridView1.Columns["kollPD"].DisplayIndex = 11;
             dataGridView1.Columns["kollND"].HeaderText = "کل نهایی دلاری";
-            dataGridView1.Columns["kollND"].Width = 216;
-            dataGridView1.Columns["kollND"].DisplayIndex = 7;
+            dataGridView1.Columns["kollND"].Width = 180;
+            dataGridView1.Columns["kollND"].DisplayIndex = 12;
             dataGridView1.Columns["kollND"].DefaultCellStyle.BackColor = Color.Gray;
             dataGridView1.Columns["kollND"].DefaultCellStyle.ForeColor = Color.White;
             dataGridView1.Columns["shenasnameID"].Visible = false;
-
             // dataGridView1.Columns["ID"].Visible = false;
-
 
 
 
@@ -161,7 +184,12 @@ namespace mostaan
             dataGridView1.Columns[5].HeaderCell.Style.Font = GlobalVariable.headerlistFONTsupecSmall;
             dataGridView1.Columns[6].HeaderCell.Style.Font = GlobalVariable.headerlistFONTsupecSmall;
             dataGridView1.Columns[7].HeaderCell.Style.Font = GlobalVariable.headerlistFONTsupecSmall;
-           
+            dataGridView1.Columns[8].HeaderCell.Style.Font = GlobalVariable.headerlistFONTsupecSmall;
+            dataGridView1.Columns[9].HeaderCell.Style.Font = GlobalVariable.headerlistFONTsupecSmall;
+            dataGridView1.Columns[10].HeaderCell.Style.Font = GlobalVariable.headerlistFONTsupecSmall;
+            dataGridView1.Columns[11].HeaderCell.Style.Font = GlobalVariable.headerlistFONTsupecSmall;
+            dataGridView1.Columns[12].HeaderCell.Style.Font = GlobalVariable.headerlistFONTsupecSmall;
+
             dataGridView1.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridView1.Columns[1].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridView1.Columns[2].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -170,10 +198,11 @@ namespace mostaan
             dataGridView1.Columns[5].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridView1.Columns[6].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridView1.Columns[7].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            
-
-
-
+            dataGridView1.Columns[8].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.Columns[9].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.Columns[10].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.Columns[11].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.Columns[12].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.Gray;
             dataGridView1.EnableHeadersVisualStyles = false;
@@ -185,30 +214,35 @@ namespace mostaan
         {
             using (var dbcontext = new Model.Context())
             {
-                int iSelectedGridIndex = dataGridView1.CurrentCell.ColumnIndex;
-                if (iSelectedGridIndex != 0)
-                    return;
-                int rowindex = dataGridView1.CurrentCell.RowIndex;
-                string rowID = dataGridView1.Rows[rowindex].Cells[2].Value.ToString();
-
-                Model.sayer model = dbcontext.sayers.SingleOrDefault(x => x.title == rowID);
-                dbcontext.Entry(model).State = EntityState.Deleted;
-                dbcontext.SaveChanges();
-                int index = 0;
-                foreach (Form form in Application.OpenForms)
+                Model.shenasname item = dbcontext.shenasnames.Where(x => x.ID == GlobalVariable.shenasnameID).FirstOrDefault();
+                if (item.final != 1)
                 {
-                    if (form.Name == "Form19_saryer")
+                    int iSelectedGridIndex = dataGridView1.CurrentCell.ColumnIndex;
+                    if (iSelectedGridIndex != 0)
+                        return;
+                    int rowindex = dataGridView1.CurrentCell.RowIndex;
+                    string rowID = dataGridView1.Rows[rowindex].Cells[2].Value.ToString();
+
+                    Model.sayer model = dbcontext.sayers.SingleOrDefault(x => x.title == rowID);
+                    dbcontext.Entry(model).State = EntityState.Deleted;
+                    dbcontext.SaveChanges();
+                    int index = 0;
+                    foreach (Form form in Application.OpenForms)
                     {
-                        break;
+                        if (form.Name == "Form19_saryer")
+                        {
+                            break;
+                        }
+
+                        index += 1;
                     }
+                    this.Hide();
 
-                    index += 1;
+                    Application.OpenForms[index].Close();
+                    Form19_saryer form13 = new Form19_saryer();
+                    form13.Show();
                 }
-                this.Hide();
-
-                Application.OpenForms[index].Close();
-                Form19_saryer form13 = new Form19_saryer();
-                form13.Show();
+                   
             }
         }
 
@@ -230,9 +264,15 @@ namespace mostaan
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Form20_addSayer form = new Form20_addSayer();
-            form.Show();
-
+            using (var dbcontext = new Model.Context())
+            {
+                Model.shenasname item = dbcontext.shenasnames.Where(x => x.ID == GlobalVariable.shenasnameID).FirstOrDefault();
+                if (item.final != 1)
+                {
+                    Form20_addSayer form = new Form20_addSayer();
+                    form.Show();
+                }
+            }
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -304,6 +344,18 @@ namespace mostaan
             this.Hide();
         }
 
-       
+        private void radpanel0_Click(object sender, EventArgs e)
+        {
+            Form6_PMainMoney form = new Form6_PMainMoney();
+            form.Show();
+            this.Hide();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            comment form = new comment();
+            form.Show();
+            this.Hide();
+        }
     }
 }

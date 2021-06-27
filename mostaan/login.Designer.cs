@@ -41,7 +41,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
             this.username = new System.Windows.Forms.TextBox();
-            this.roundRectShape1 = new Telerik.WinControls.RoundRectShape(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
             this.radPanel2 = new Telerik.WinControls.UI.RadPanel();
             this.password = new System.Windows.Forms.TextBox();
@@ -51,6 +50,7 @@
             this.verifPanel = new Telerik.WinControls.UI.RadPanel();
             this.vrifyButt = new System.Windows.Forms.Label();
             this.message = new System.Windows.Forms.Label();
+            this.roundRectShape1 = new Telerik.WinControls.RoundRectShape(this.components);
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -115,13 +115,17 @@
             // 
             // loginFormHeaderPanel
             // 
+            this.loginFormHeaderPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.loginFormHeaderPanel.Controls.Add(this.label1);
             this.loginFormHeaderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.loginFormHeaderPanel.Location = new System.Drawing.Point(3, 3);
             this.loginFormHeaderPanel.Name = "loginFormHeaderPanel";
+            // 
+            // 
+            // 
+            this.loginFormHeaderPanel.RootElement.ControlBounds = new System.Drawing.Rectangle(3, 3, 200, 100);
             this.loginFormHeaderPanel.Size = new System.Drawing.Size(373, 82);
             this.loginFormHeaderPanel.TabIndex = 0;
-            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.loginFormHeaderPanel.GetChildAt(0).GetChildAt(1))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
             // 
             // label1
             // 
@@ -130,20 +134,24 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(138, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.Size = new System.Drawing.Size(76, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "ورود به سامانه";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // loginBodyPanle
             // 
+            this.loginBodyPanle.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.loginBodyPanle.Controls.Add(this.tableLayoutPanel3);
             this.loginBodyPanle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.loginBodyPanle.Location = new System.Drawing.Point(3, 91);
             this.loginBodyPanle.Name = "loginBodyPanle";
+            // 
+            // 
+            // 
+            this.loginBodyPanle.RootElement.ControlBounds = new System.Drawing.Rectangle(3, 91, 200, 100);
             this.loginBodyPanle.Size = new System.Drawing.Size(373, 350);
             this.loginBodyPanle.TabIndex = 1;
-            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.loginBodyPanle.GetChildAt(0).GetChildAt(1))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
             // 
             // tableLayoutPanel3
             // 
@@ -201,16 +209,18 @@
             // 
             // radPanel1
             // 
+            this.radPanel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.radPanel1.Controls.Add(this.username);
             this.radPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radPanel1.Location = new System.Drawing.Point(10, 10);
             this.radPanel1.Name = "radPanel1";
             this.radPanel1.Padding = new System.Windows.Forms.Padding(7);
+            // 
+            // 
+            // 
+            this.radPanel1.RootElement.ControlBounds = new System.Drawing.Rectangle(10, 10, 200, 100);
             this.radPanel1.Size = new System.Drawing.Size(347, 40);
             this.radPanel1.TabIndex = 0;
-            ((Telerik.WinControls.UI.RadPanelElement)(this.radPanel1.GetChildAt(0))).Padding = new System.Windows.Forms.Padding(7);
-            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanel1.GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(36)))), ((int)(((byte)(37)))));
-            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanel1.GetChildAt(0).GetChildAt(1))).Shape = this.roundRectShape1;
             // 
             // username
             // 
@@ -223,10 +233,6 @@
             this.username.Size = new System.Drawing.Size(333, 26);
             this.username.TabIndex = 0;
             // 
-            // roundRectShape1
-            // 
-            this.roundRectShape1.IsRightToLeft = false;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.radPanel2);
@@ -238,16 +244,18 @@
             // 
             // radPanel2
             // 
+            this.radPanel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.radPanel2.Controls.Add(this.password);
             this.radPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radPanel2.Location = new System.Drawing.Point(10, 10);
             this.radPanel2.Name = "radPanel2";
             this.radPanel2.Padding = new System.Windows.Forms.Padding(7);
+            // 
+            // 
+            // 
+            this.radPanel2.RootElement.ControlBounds = new System.Drawing.Rectangle(10, 10, 200, 100);
             this.radPanel2.Size = new System.Drawing.Size(347, 38);
             this.radPanel2.TabIndex = 0;
-            ((Telerik.WinControls.UI.RadPanelElement)(this.radPanel2.GetChildAt(0))).Padding = new System.Windows.Forms.Padding(7);
-            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanel2.GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(36)))), ((int)(((byte)(37)))));
-            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanel2.GetChildAt(0).GetChildAt(1))).Shape = this.roundRectShape1;
             // 
             // password
             // 
@@ -304,18 +312,23 @@
             this.verifPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.verifPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.verifPanel.Controls.Add(this.vrifyButt);
             this.verifPanel.Location = new System.Drawing.Point(94, 3);
             this.verifPanel.Name = "verifPanel";
+            // 
+            // 
+            // 
+            this.verifPanel.RootElement.ControlBounds = new System.Drawing.Rectangle(94, 3, 200, 100);
             this.verifPanel.Size = new System.Drawing.Size(174, 34);
             this.verifPanel.TabIndex = 0;
-            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.verifPanel.GetChildAt(0).GetChildAt(1))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
             // 
             // vrifyButt
             // 
+            this.vrifyButt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.vrifyButt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.vrifyButt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.vrifyButt.ForeColor = System.Drawing.Color.White;
+            this.vrifyButt.ForeColor = System.Drawing.Color.Black;
             this.vrifyButt.Location = new System.Drawing.Point(0, 0);
             this.vrifyButt.Name = "vrifyButt";
             this.vrifyButt.Size = new System.Drawing.Size(174, 34);

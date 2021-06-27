@@ -4,62 +4,29 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Telerik.WinControls;
-using mostaan.Classes;
+using mostaan.Model;
+using System.IO;
 
 namespace mostaan
 {
-    public partial class DaryaftiReport : Form
+    public partial class daryaftiReport : Form
     {
-        Model.Context dbcontext = new Model.Context();
-        FontClass fontclass = new FontClass();
-        //databaseManager manager = new databaseManager();
-        [System.Runtime.InteropServices.DllImport("gdi32.dll")]
-        private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont,
-           IntPtr pdv, [System.Runtime.InteropServices.In] ref uint pcFonts);
 
-        private PrivateFontCollection fonts = new PrivateFontCollection();
-
-        public void initFont()
+        public daryaftiReport(DataTable dt1)
         {
-
-            byte[] fontData = Properties.Resources.IRANSans_FaNum_;
-            IntPtr fontPtr = System.Runtime.InteropServices.Marshal.AllocCoTaskMem(fontData.Length);
-            System.Runtime.InteropServices.Marshal.Copy(fontData, 0, fontPtr, fontData.Length);
-            uint dummy = 0;
-            fonts.AddMemoryFont(fontPtr, Properties.Resources.IRANSans_FaNum_.Length);
-            AddFontMemResourceEx(fontPtr, (uint)Properties.Resources.IRANSans_FaNum_.Length, IntPtr.Zero, ref dummy);
-            System.Runtime.InteropServices.Marshal.FreeCoTaskMem(fontPtr);
-            GlobalVariable.headerlistFONT = new Font(fonts.Families[0], 24.0F, System.Drawing.FontStyle.Regular);
-
-            GlobalVariable.headerlistFONTsmall = new Font(fonts.Families[0], 12.0F, System.Drawing.FontStyle.Regular);
-            //GlobalVariable.headerlistFONTBold = new Font(fonts.Families[0], 11.0F, System.Drawing.FontStyle.Bold);
-            //GlobalVariable.HlistFONT = new Font(fonts.Families[0], 18.0F, System.Drawing.FontStyle.Regular);
-            // label1.Font = GlobalVariable.headerlistFONT;
-        }
-        public DaryaftiReport(DataTable dt1)
-        {
-         
-
+            
+            
             InitializeComponent();
-            initFont();
+            FontClass fontclass = new FontClass();
             List<Control> allControls = fontclass.GetAllControls(this);
             allControls.ForEach(k => k.Font = mostaan.GlobalVariable.headerlistFONTsmall);
             this.MaximizeBox = false;
+            this.CenterToScreen();
 
-            filterPanel.PanelElement.Shape = new RoundRectShape();
-            filterPanel.PanelElement.PanelFill.GradientStyle = GradientStyles.Solid;
-            filterPanel.PanelElement.PanelFill.BackColor = Color.Gray;
-
-
-            newRecordPanel.PanelElement.Shape = new RoundRectShape();
-            newRecordPanel.PanelElement.PanelFill.GradientStyle = GradientStyles.Solid;
-            newRecordPanel.PanelElement.PanelFill.BackColor = Color.Gray;
 
             if (dt1.Columns.Count != 0)
             {
@@ -67,53 +34,170 @@ namespace mostaan
             }
             else
             {
-                List<Model.archive> lst = (from p in dbcontext.Archives
-                                           select p).ToList();
-                dataGridView1.DataSource = lst;
+                using (Context dbcontext = new Context())
+                {
+                    List<Model.archive> lst = (from p in dbcontext.Archives where p.hesab == "1" select p).OrderBy(x=>x.ID).ToList();
+                    dataGridView1.DataSource = lst;
+                }
             }
 
-            
-            dataGridView1.Columns[0].HeaderText = "شماره";
-            dataGridView1.Columns[1].HeaderText = "موضوع";
-            dataGridView1.Columns[2].HeaderText = "نوع محصول";
-            dataGridView1.Columns[3].HeaderText = "رده محصول";
-            dataGridView1.Columns[4].HeaderText = "مرکز";
-            dataGridView1.Columns[5].HeaderText = "پروژه";
-            dataGridView1.Columns[6].HeaderText = "نوع سند";
-            dataGridView1.Columns[7].HeaderText = "کارفرما";
-            dataGridView1.Columns[8].HeaderText = "تاریخ سند";
-            dataGridView1.Columns[9].HeaderText = "شماره سند";
-            dataGridView1.Columns[10].HeaderText = "واریز";
-            dataGridView1.Columns[11].HeaderText = "مبلغ";
-            dataGridView1.Columns[12].HeaderText = "حساب";
-            this.CenterToScreen();
-        }
 
+            dataGridView1.Width = 1020;
+            dataGridView1.Columns["ID"].HeaderText = "ردیف";
+            dataGridView1.Columns["ID"].Width = 120;
+            dataGridView1.Columns["ID"].DisplayIndex = 3;
+
+            dataGridView1.Columns["referbish"].HeaderText = "اصلاحیه";
+            dataGridView1.Columns["referbish"].Width = 200;
+            dataGridView1.Columns["referbish"].DisplayIndex = 9;
+            dataGridView1.Columns["referbish"].DefaultCellStyle.Font = GlobalVariable.headerlistFONTsupecSmall;
+
+            dataGridView1.Columns["shomareSanad"].HeaderText = "شماره سند";
+            dataGridView1.Columns["shomareSanad"].Width = 200;
+            dataGridView1.Columns["shomareSanad"].DisplayIndex = 4;
+            dataGridView1.Columns["shomareSanad"].DefaultCellStyle.Font = GlobalVariable.headerlistFONTsupecSmall;
+
+
+            dataGridView1.Columns["shnesnameTitle"].HeaderText = "عنوان شناسنامه";
+            dataGridView1.Columns["shnesnameTitle"].Width = 300;
+            dataGridView1.Columns["shnesnameTitle"].DisplayIndex = 5;
+            dataGridView1.Columns["shnesnameTitle"].DefaultCellStyle.Font = GlobalVariable.headerlistFONTsupecSmall;
+
+            dataGridView1.Columns["subject"].HeaderText = "عنوان";
+            dataGridView1.Columns["subject"].Width = 300;
+            dataGridView1.Columns["subject"].DisplayIndex = 6;
+            dataGridView1.Columns["subject"].DefaultCellStyle.Font = GlobalVariable.headerlistFONTsupecSmall;
+
+
+
+
+
+            dataGridView1.Columns["type"].HeaderText = "واحد پولی";
+            dataGridView1.Columns["type"].Width = 200;
+            dataGridView1.Columns["type"].DisplayIndex = 7;
+            dataGridView1.Columns["type"].DefaultCellStyle.Font = GlobalVariable.headerlistFONTsupecSmall;
+
+
+
+            dataGridView1.Columns["mablagh"].HeaderText = "مبلغ ";
+            dataGridView1.Columns["mablagh"].Width = 200;
+            dataGridView1.Columns["mablagh"].DisplayIndex = 8;
+            dataGridView1.Columns["mablagh"].DefaultCellStyle.Font = GlobalVariable.headerlistFONTsupecSmall;
+
+            dataGridView1.Columns["checkNumber"].HeaderText = "شماره چک ";
+            dataGridView1.Columns["checkNumber"].Width = 200;
+            dataGridView1.Columns["checkNumber"].DisplayIndex = 9;
+            dataGridView1.Columns["checkNumber"].DefaultCellStyle.Font = GlobalVariable.headerlistFONTsupecSmall;
+
+            dataGridView1.Columns["bankName"].HeaderText = "بانک عامل ";
+            dataGridView1.Columns["bankName"].Width = 200;
+            dataGridView1.Columns["bankName"].DisplayIndex = 10;
+            dataGridView1.Columns["bankName"].DefaultCellStyle.Font = GlobalVariable.headerlistFONTsupecSmall;
+
+
+            dataGridView1.Columns["imageName"].Visible = false;
+            dataGridView1.Columns["rank"].Visible = false;
+            dataGridView1.Columns["markaz"].Visible = false;
+            dataGridView1.Columns["tarikh"].Visible = false;
+            dataGridView1.Columns["variz"].Visible = false;
+            dataGridView1.Columns["hesab"].Visible = false;
+            dataGridView1.Columns["radif"].Visible = false;
+         
+            dataGridView1.Columns["radifTitle"].Visible = false;
+            dataGridView1.Columns["project"].Visible = false;
+
+
+        }
         private void newRecord_Click(object sender, EventArgs e)
         {
-            newRecord newrecord = new newRecord("1");
-            newrecord.Show();
+            daryaftiNew form = new daryaftiNew();
+            form.Show();
         }
-
-        private void newRecord_Click_1(object sender, EventArgs e)
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            newRecord newrecord = new newRecord("1");
-            newrecord.Show();
-            this.Hide();
-        }
+            using (var dbcontext = new Model.Context())
+            {
+                int iSelectedGridIndex = dataGridView1.CurrentCell.ColumnIndex;
+                if (iSelectedGridIndex != 0)
+                    return;
+                int rowindex = dataGridView1.CurrentCell.RowIndex;
+                int rowID = Int32.Parse(dataGridView1.Rows[rowindex].Cells[2].Value.ToString());
 
-        private void filterPanel_Paint(object sender, PaintEventArgs e)
-        {
+                Model.archive model = dbcontext.Archives.SingleOrDefault(x => x.ID == rowID);
+               
+                dbcontext.Entry(model).State = EntityState.Deleted;
+                dbcontext.SaveChanges();
+              
 
+
+                List<Model.archive> lst = (from p in dbcontext.Archives
+                                           where p.hesab == "1"
+                                           select p).ToList();
+                dataGridView1.DataSource = lst;
+                string imageName = model.imageName;
+                var directory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+
+
+                System.IO.File.Delete(directory + imageName);
+
+            }
         }
 
         private void filter_Click(object sender, EventArgs e)
         {
-            filterPage filp = new filterPage("1");
-            filp.Show();
+            daryaftiFilter form = new daryaftiFilter("1");
+            form.Show();
             this.Hide();
         }
-       
-        
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            using (var dbcontext = new Model.Context())
+            {
+                int iSelectedGridIndex = dataGridView1.CurrentCell.ColumnIndex;
+                int rowindex = dataGridView1.CurrentCell.RowIndex;
+                int rowID = Int32.Parse(dataGridView1.Rows[rowindex].Cells[1].Value.ToString());
+                Model.archive model = dbcontext.Archives.SingleOrDefault(x => x.ID == rowID);
+                string imageName = "";
+                imageName = model.imageName;
+
+                if (imageName != "")
+                {
+                    try
+                    {
+                        var directory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+
+                        if (Path.GetExtension(imageName) == ".pdf")
+                        {
+                            try
+                            {
+                                factorPdf factore = new factorPdf(directory + imageName);
+                                factore.Show();
+                            }
+                            catch (Exception error)
+                            {
+                                label1.Text = error.InnerException.Message;
+                            }
+                        }
+                        else
+                        {
+                            factorImage factor = new factorImage(directory + imageName);
+                            factor.Show();
+                        }
+
+
+                    }
+                    catch (Exception error)
+                    {
+
+
+                    }
+
+
+                }
+
+
+            }
+        }
     }
 }

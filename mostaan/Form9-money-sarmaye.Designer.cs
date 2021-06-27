@@ -37,6 +37,8 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.radScrollablePanel1 = new Telerik.WinControls.UI.RadScrollablePanel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Del = new System.Windows.Forms.DataGridViewImageColumn();
             this.header = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
@@ -74,8 +76,6 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.radPanel14 = new Telerik.WinControls.UI.RadPanel();
             this.label18 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Del = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelNum1)).BeginInit();
             this.panelNum1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelNum2)).BeginInit();
@@ -87,6 +87,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radScrollablePanel1)).BeginInit();
             this.radScrollablePanel1.PanelContainer.SuspendLayout();
             this.radScrollablePanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
@@ -121,7 +122,6 @@
             this.panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel14)).BeginInit();
             this.radPanel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelNum1
@@ -212,7 +212,7 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // radScrollablePanel1
+            // radscrollpanel2
             // 
             this.radScrollablePanel1.AllowAutomaticScrollToControl = false;
             this.radScrollablePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -220,7 +220,7 @@
             this.radScrollablePanel1.Name = "radScrollablePanel1";
             this.radScrollablePanel1.Padding = new System.Windows.Forms.Padding(0);
             // 
-            // radScrollablePanel1.PanelContainer
+            // radscrollpanel2.PanelContainer
             // 
             this.radScrollablePanel1.PanelContainer.Controls.Add(this.dataGridView1);
             this.radScrollablePanel1.PanelContainer.Location = new System.Drawing.Point(0, 0);
@@ -228,6 +228,38 @@
             this.radScrollablePanel1.Size = new System.Drawing.Size(1158, 291);
             this.radScrollablePanel1.TabIndex = 4;
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radScrollablePanel1.GetChildAt(0).GetChildAt(1))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Del});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.Location = new System.Drawing.Point(-421, 2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dataGridView1.RowTemplate.Height = 55;
+            this.dataGridView1.RowTemplate.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(1963, 272);
+            this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // Del
+            // 
+            this.Del.HeaderText = "حذف";
+            this.Del.Image = global::mostaan.Properties.Resources.del2;
+            this.Del.Name = "Del";
+            this.Del.ReadOnly = true;
             // 
             // header
             // 
@@ -285,6 +317,7 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "نظرات مدیر پروژه";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // panel3
             // 
@@ -309,6 +342,7 @@
             this.radpanel0.TabIndex = 0;
             this.radpanel0.Text = "هزینه های پیش بینی شده";
             this.radpanel0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radpanel0.Click += new System.EventHandler(this.radpanel0_Click);
             // 
             // panel2
             // 
@@ -390,7 +424,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(101, 37);
             this.label10.TabIndex = 0;
-            this.label10.Text = "سایر هزینه ها";
+            this.label10.Text = "مواد اولیه";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
@@ -727,38 +761,6 @@
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Del});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Location = new System.Drawing.Point(-421, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dataGridView1.RowTemplate.Height = 55;
-            this.dataGridView1.RowTemplate.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1963, 272);
-            this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            // 
-            // Del
-            // 
-            this.Del.HeaderText = "حذف";
-            this.Del.Image = global::mostaan.Properties.Resources.del2;
-            this.Del.Name = "Del";
-            this.Del.ReadOnly = true;
-            // 
             // Form9_money_sarmaye
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -779,6 +781,7 @@
             this.radScrollablePanel1.PanelContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radScrollablePanel1)).EndInit();
             this.radScrollablePanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).EndInit();
             this.radPanel1.ResumeLayout(false);
@@ -813,7 +816,6 @@
             this.panel14.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radPanel14)).EndInit();
             this.radPanel14.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -15,7 +15,7 @@ namespace mostaan
     public partial class Form6_PMainMoney : Form
     {
         Model.Context dbcontext = new Model.Context();
-        int shenasnameID = GlobalVariable.shenasnameID;
+        string shenasnameID = GlobalVariable.shenasnameID;
         public Form6_PMainMoney()
         {
 
@@ -84,13 +84,7 @@ namespace mostaan
             radPanel1.PanelElement.PanelFill.GradientStyle = GradientStyles.Solid;
             radPanel1.PanelElement.PanelFill.BackColor = Color.White;
 
-            radPanel12.PanelElement.Shape = new RoundRectShape();
-            radPanel12.PanelElement.PanelFill.GradientStyle = GradientStyles.Solid;
-            radPanel12.PanelElement.PanelFill.BackColor = Color.LightGray;
-
-            radPanel11.PanelElement.Shape = new RoundRectShape();
-            radPanel11.PanelElement.PanelFill.GradientStyle = GradientStyles.Solid;
-            radPanel11.PanelElement.PanelFill.BackColor = Color.LightGray;
+            
 
 
             radPanel13.PanelElement.Shape = new RoundRectShape();
@@ -111,8 +105,7 @@ namespace mostaan
             label10.Font = GlobalVariable.headerlistFONTsupecSmall;
             label11.Font = GlobalVariable.headerlistFONTsupecSmall;
 
-            Phazine.Font = GlobalVariable.headerlistFONTBold;
-            Nhazine.Font = GlobalVariable.headerlistFONTBold;
+           
 
             List<Model.ejraeiat>  lst = (from p in dbcontext.ejraeiats where p.shenasnameID == shenasnameID select p).ToList();
             dataGridView1.DataSource = lst;
@@ -122,10 +115,7 @@ namespace mostaan
             int nd = lst.Sum(x => x.dollaryN);
             int nr = lst.Sum(x => x.riallyN);
 
-            Phazine.Text =  String.Format("{0:n0}", pr) + " ریال و " + string.Format("{0:n0}", pd) + " دلار ";
-            Nhazine.Text = string.Format("{0:n0}", nr)  + " ریال و " + string.Format("{0:n0}", nd) + " دلار ";
-
-
+           
             foreach (var item in lst)
             {
                 item.ID = lst.IndexOf(item) + 1;
@@ -205,9 +195,13 @@ namespace mostaan
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            
-            Form7_addEjraeiat form7 = new Form7_addEjraeiat();
-            form7.Show();
+            Model.shenasname item = dbcontext.shenasnames.Where(x => x.ID == GlobalVariable.shenasnameID).FirstOrDefault();
+            if (item.final != 1)
+            {
+                Form7_addEjraeiat form7 = new Form7_addEjraeiat();
+                form7.Show();
+
+            }
 
         }
 
@@ -296,6 +290,61 @@ namespace mostaan
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentDoubleClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            using (var dbcontext = new Model.Context())
+            {
+                Model.shenasname item = dbcontext.shenasnames.Where(x => x.ID == GlobalVariable.shenasnameID).FirstOrDefault();
+                if (item.final != 1)
+                {
+                    int iSelectedGridIndex = dataGridView1.CurrentCell.ColumnIndex;
+                    if (iSelectedGridIndex != 0)
+                        return;
+                    int rowindex = dataGridView1.CurrentCell.RowIndex;
+                    string rowID = dataGridView1.Rows[rowindex].Cells[2].Value.ToString();
+
+                    Model.ejraeiat model = dbcontext.ejraeiats.SingleOrDefault(x => x.title == rowID);
+                    dbcontext.Entry(model).State = EntityState.Deleted;
+                    dbcontext.SaveChanges();
+                    int index = 0;
+                    foreach (Form form in Application.OpenForms)
+                    {
+
+                        if (form.Name == "Form6-Money-Ejraeiat")
+                        {
+                            break;
+                        }
+                        else
+                        {
+                            index += 1;
+                        }
+
+                    }
+                    this.Hide();
+
+                    Application.OpenForms[index-1].Close();
+                    Form6_PMainMoney form6 = new Form6_PMainMoney();
+                    form6.Show();
+                }
+
+            }
+
+        }
+
+        private void radpanel0_Click(object sender, EventArgs e)
+        {
+            Form6_PMainMoney form = new Form6_PMainMoney();
+            form.Show();
+            this.Hide();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            comment form = new comment();
+            form.Show();
+            this.Hide();
         }
     }
 }
