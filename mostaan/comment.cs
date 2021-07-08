@@ -148,7 +148,7 @@ namespace mostaan
                     //shen.final = 1;
                     dbcontext.SaveChanges();
                 }
-                GlobalVariable.shenasnameID = shen.parent;
+                //GlobalVariable.shenasnameID = shen.parent;
             }
             this.Hide();
             projectFiles pf = new projectFiles();

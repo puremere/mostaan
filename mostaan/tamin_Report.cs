@@ -162,6 +162,7 @@ namespace mostaan
         {
             tamin_New form = new tamin_New("0");
             form.Show();
+            this.Hide();
         }
        
 
@@ -265,6 +266,21 @@ namespace mostaan
                                          select p).OrderBy(x => x.ID).ToList();
                 dataGridView1.DataSource = lst;
             } // else
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            zero form = new zero();
+            form.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ChooseBank bank = new ChooseBank();
+
+            bank.Show();
+            this.Hide();
         }
     }
 }

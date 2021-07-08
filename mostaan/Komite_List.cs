@@ -827,5 +827,19 @@ namespace mostaan
             }
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            zero form = new zero();
+            form.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Komite_Menu form = new Komite_Menu();
+            form.Show();
+            this.Hide();
+        }
     }
 }

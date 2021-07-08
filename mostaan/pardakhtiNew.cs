@@ -101,12 +101,20 @@ namespace mostaan
 
             Context dbcontext = new Context();
             string sanad = shomareSanad1.Text;
+
+            if (sanad == "")
+            {
+                header.Text = "شماره سند انتخاب نشده است";
+                header.ForeColor = Color.Red;
+                return;
+            }
+
             Int64 mbl = model.mablagh;
 
             string shenasnameTitle = model.shnesnameTitle;
-            archive pastmodel = dbcontext.Archives.SingleOrDefault(x => x.shomareTamin == tamintxt);
+            archive pastmodel = dbcontext.Archives.SingleOrDefault(x => x.shomareTamin == tamintxt && x.shomareSanad == sanad);
 
-            if (pastmodel == null)
+            if (pastmodel != null)
             {
                 header.Text = "برای پارامتر های موجود فاکتور انتخاب شده است";
                 header.ForeColor = Color.Red;
@@ -171,12 +179,7 @@ namespace mostaan
             
 
 
-            if (pastmodel == null)
-            {
-                header.Text = "برای پارامتر های موجود فاکتور انتخاب شده است";
-                header.ForeColor = Color.Red;
-                return;
-            }
+           
           
            
 
@@ -363,13 +366,15 @@ namespace mostaan
                 string bankValue = bankType.SelectedItem.ToString();
                 if (bankValue == "منابع غیر تولید")
                 {
+                    
                     List<bank> lst = dbcontext.banks.Where(x => x.type == "منابع غیر تولید").ToList();
                     bank.DataSource = lst;
 
                 }
                 else
                 {
-                    List<bank> lst = dbcontext.banks.Where(x => x.type != "منابع غیر تولید").ToList();
+                    //List<bank> lst0 = dbcontext.banks.ToList();
+                    List<bank> lst = dbcontext.banks.Where(x => x.type != "منابع غیر تولید" || x.type == null).ToList();
                     bank.DataSource = lst;
                 }
 
@@ -377,6 +382,22 @@ namespace mostaan
                
             }
                
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            zero form = new zero();
+            form.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            PardakhtiReport form = new PardakhtiReport(dt);
+            form.Show();
+            this.Hide();
+
         }
     }
 }

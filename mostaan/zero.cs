@@ -18,6 +18,7 @@ namespace mostaan
         public zero()
         {
             InitializeComponent();
+
             FontClass fontclass = new FontClass();
             List<Control> allControls = fontclass.GetAllControls(this);
             allControls.ForEach(k => k.Font = mostaan.GlobalVariable.headerlistFONTsmall);
@@ -72,52 +73,68 @@ namespace mostaan
         private void shenasname_Click(object sender, EventArgs e)
         {
             Form1_chooseList intro = new Form1_chooseList();
+           
             intro.Show();
+            this.Hide();
         }
 
         private void faktor_Click(object sender, EventArgs e)
         {
             ChooseBank bank = new ChooseBank();
+          
             bank.Show();
+            this.Hide();
         }
 
         private void sazman_Click(object sender, EventArgs e)
         {
             Bakhsh_Menu intro = new Bakhsh_Menu();
+        
             intro.Show();
+            this.Hide();
         }
 
         private void user_Click(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
             User_List  list = new User_List(dt);
+          
             list.Show();
+            this.Hide();
         }
 
         private void bakhsh_Click(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
             daryaftiReport form = new daryaftiReport(dt);
+          
             form.Show();
+            this.Hide();
         }
 
         private void markaz_Click(object sender, EventArgs e)
         {
             Markaz_Menu form = new Markaz_Menu();
+     
             form.Show();
+            this.Hide();
         }
 
         private void komite_Click(object sender, EventArgs e)
         {
             Komite_Menu form = new Komite_Menu();
+          
             form.Show();
+            this.Hide();
         }
 
         private void bank_Click(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
             Bank_List form = new Bank_List(dt);
+          
             form.Show();
+            this.Hide();
         }
 
         private void check_Click(object sender, EventArgs e)
@@ -125,6 +142,7 @@ namespace mostaan
             DataTable dt = new DataTable();
             checkList form = new checkList(dt);
             form.Show();
+            this.Hide();
         }
     }
 }

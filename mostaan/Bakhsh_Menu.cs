@@ -43,6 +43,7 @@ namespace mostaan
         {
             Bakhsh_List form = new Bakhsh_List();
             form.Show();
+            this.Hide();
         }
 
         private void bakhshAdd_Click(object sender, EventArgs e)
@@ -66,8 +67,23 @@ namespace mostaan
 
                 form.Show();
             }
+            this.Hide();
 
-                
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            zero form = new zero();
+            form.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            zero form = new zero();
+            form.Show();
+            this.Hide();
         }
     }
 }

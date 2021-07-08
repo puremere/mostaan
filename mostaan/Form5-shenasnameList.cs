@@ -936,7 +936,7 @@ namespace mostaan
             }
             else if (iSelectedGridIndex == 1)
             {
-                if (item.final == 1)
+                if (item.final != 1)
                 {
                     DeleteItem(rowID);
                 }
@@ -958,6 +958,21 @@ namespace mostaan
            
            
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            zero form = new zero();
+            form.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Form1_chooseList intro = new Form1_chooseList();
+
+            intro.Show();
+            this.Hide();
         }
     }
 }

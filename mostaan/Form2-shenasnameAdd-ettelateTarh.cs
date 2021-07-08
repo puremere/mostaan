@@ -437,6 +437,19 @@ namespace mostaan
 
         }
 
-       
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            zero form = new zero();
+            form.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Form1_chooseList intro = new Form1_chooseList();
+
+            intro.Show();
+            this.Hide();
+        }
     }
 }

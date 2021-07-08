@@ -81,6 +81,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.referbish = new System.Windows.Forms.Label();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.radScrollablePanel1)).BeginInit();
             this.radScrollablePanel1.PanelContainer.SuspendLayout();
             this.radScrollablePanel1.SuspendLayout();
@@ -123,6 +127,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).BeginInit();
             this.radPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // radScrollablePanel1
@@ -143,16 +151,18 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel11, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel8, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel5, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.header, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel20, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.webBrowser1, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel11, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel8, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel5, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.header, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel20, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.webBrowser1, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(-3, 9);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 7;
+            this.tableLayoutPanel1.RowCount = 8;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882353F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.76471F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.76471F));
@@ -171,12 +181,12 @@
             this.tableLayoutPanel11.Controls.Add(this.tableLayoutPanel19, 1, 0);
             this.tableLayoutPanel11.Controls.Add(this.sourceLable, 0, 0);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 339);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 365);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 1;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 90F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(942, 90);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(942, 86);
             this.tableLayoutPanel11.TabIndex = 7;
             // 
             // tableLayoutPanel19
@@ -258,11 +268,11 @@
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel15, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel13, 0, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 243);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 273);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(942, 90);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(942, 86);
             this.tableLayoutPanel8.TabIndex = 3;
             // 
             // tableLayoutPanel15
@@ -459,11 +469,11 @@
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel12, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel16, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 147);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 181);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(942, 90);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(942, 86);
             this.tableLayoutPanel5.TabIndex = 2;
             // 
             // tableLayoutPanel12
@@ -595,9 +605,9 @@
             // header
             // 
             this.header.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.header.Location = new System.Drawing.Point(3, 0);
+            this.header.Location = new System.Drawing.Point(3, 41);
             this.header.Name = "header";
-            this.header.Size = new System.Drawing.Size(942, 48);
+            this.header.Size = new System.Drawing.Size(942, 45);
             this.header.TabIndex = 0;
             this.header.Text = "فاکتور تامین";
             this.header.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -610,11 +620,11 @@
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel9, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 51);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 89);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(942, 90);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(942, 86);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // tableLayoutPanel9
@@ -761,13 +771,13 @@
             this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.75207F));
             this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 164F));
             this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
-            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 242F));
+            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 243F));
             this.tableLayoutPanel20.Controls.Add(this.filterPanel1, 1, 0);
             this.tableLayoutPanel20.Controls.Add(this.radPanel2, 2, 0);
             this.tableLayoutPanel20.Controls.Add(this.imageName, 4, 0);
             this.tableLayoutPanel20.Controls.Add(this.pictureBox1, 3, 0);
             this.tableLayoutPanel20.Controls.Add(this.referbish, 0, 0);
-            this.tableLayoutPanel20.Location = new System.Drawing.Point(3, 435);
+            this.tableLayoutPanel20.Location = new System.Drawing.Point(3, 457);
             this.tableLayoutPanel20.Name = "tableLayoutPanel20";
             this.tableLayoutPanel20.RowCount = 1;
             this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -781,12 +791,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.filterPanel1.BackColor = System.Drawing.Color.Silver;
             this.filterPanel1.Controls.Add(this.filter);
-            this.filterPanel1.Location = new System.Drawing.Point(228, 3);
+            this.filterPanel1.Location = new System.Drawing.Point(227, 3);
             this.filterPanel1.Name = "filterPanel1";
             // 
             // 
             // 
-            this.filterPanel1.RootElement.ControlBounds = new System.Drawing.Rectangle(229, 3, 200, 100);
+            this.filterPanel1.RootElement.ControlBounds = new System.Drawing.Rectangle(228, 3, 200, 100);
             this.filterPanel1.Size = new System.Drawing.Size(89, 47);
             this.filterPanel1.TabIndex = 4;
             // 
@@ -811,12 +821,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.radPanel2.BackColor = System.Drawing.Color.Silver;
             this.radPanel2.Controls.Add(this.uploadImage);
-            this.radPanel2.Location = new System.Drawing.Point(323, 3);
+            this.radPanel2.Location = new System.Drawing.Point(322, 3);
             this.radPanel2.Name = "radPanel2";
             // 
             // 
             // 
-            this.radPanel2.RootElement.ControlBounds = new System.Drawing.Rectangle(324, 3, 200, 100);
+            this.radPanel2.RootElement.ControlBounds = new System.Drawing.Rectangle(323, 3, 200, 100);
             this.radPanel2.Size = new System.Drawing.Size(158, 47);
             this.radPanel2.TabIndex = 4;
             // 
@@ -838,16 +848,16 @@
             // 
             this.imageName.AutoSize = true;
             this.imageName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.imageName.Location = new System.Drawing.Point(582, 0);
+            this.imageName.Location = new System.Drawing.Point(581, 0);
             this.imageName.Name = "imageName";
-            this.imageName.Size = new System.Drawing.Size(237, 53);
+            this.imageName.Size = new System.Drawing.Size(238, 53);
             this.imageName.TabIndex = 6;
             this.imageName.Visible = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(487, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(486, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(89, 47);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -865,11 +875,58 @@
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(3, 531);
+            this.webBrowser1.Location = new System.Drawing.Point(3, 549);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(942, 289);
+            this.webBrowser1.Size = new System.Drawing.Size(942, 271);
             this.webBrowser1.TabIndex = 9;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.tableLayoutPanel4);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(942, 35);
+            this.panel2.TabIndex = 10;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 3;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel4.Controls.Add(this.pictureBox2, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.pictureBox3, 1, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(942, 35);
+            this.tableLayoutPanel4.TabIndex = 5;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::mostaan.Properties.Resources.NicePng_arrow_clipart_png_440119;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(41, 26);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::mostaan.Properties.Resources.NicePng_camping_png_2083364;
+            this.pictureBox3.Location = new System.Drawing.Point(50, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(41, 26);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // tamin_New
             // 
@@ -925,6 +982,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).EndInit();
             this.radPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -983,5 +1044,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label referbish;
         private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

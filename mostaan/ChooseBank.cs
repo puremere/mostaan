@@ -61,14 +61,31 @@ namespace mostaan
             DataTable dt = new DataTable();
             PardakhtiReport pardakhtiReport = new PardakhtiReport(dt);
             pardakhtiReport.Show();
-            
+            this.Hide();
+
+
         }
         private void Daryafti_Click(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
             tamin_Report form = new tamin_Report(dt);
             form.Show();
+            this.Hide();
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            zero form = new zero();
+            form.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            zero form = new zero();
+            form.Show();
+            this.Hide();
         }
     }
 }

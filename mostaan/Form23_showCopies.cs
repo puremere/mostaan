@@ -38,8 +38,8 @@ namespace mostaan
             using (var dbcontext = new Model.Context())
             {
                 List<Model.shenasname> lstdd = dbcontext.shenasnames.ToList();
-                List<shenasname> lst = (from p in lstdd where (p.ID == shenasnameID || p.parent == shenasnameID) && (p.final == 1) select p).OrderByDescending(x => x.date).ThenByDescending(x=>x.time).ToList();
-               
+                List<shenasname> lst = (from p in lstdd where (p.ID == shenasnameID || p.parent == shenasnameID) && (p.final == 1) select p).OrderByDescending(x => x.date).ThenByDescending(x => x.time).ToList();
+
                 List<ViewModel.shenasnameCopiesVM> list = new List<ViewModel.shenasnameCopiesVM>();
                 foreach (var item in lst)
                 {
@@ -163,7 +163,7 @@ namespace mostaan
                     List<ejraeiat> ejraeatList = dbcontext.ejraeiats.Where(x => x.shenasnameID == rowID).ToList();
                     if (ejraeatList != null)
                     {
-                        
+
                         foreach (ejraeiat item in ejraeatList)
                         {
                             ejraeiat newItem = item;
@@ -244,6 +244,7 @@ namespace mostaan
 
                     shenasname model = new shenasname()
                     {
+
                         comment = selecteditem.comment,
                         date = DateTime.Now,
                         time = DateTime.Now.TimeOfDay,
@@ -333,9 +334,20 @@ namespace mostaan
                         ZDivazifeHPD = selecteditem.ZDivazifeHPD,
                         ZDivazifeHPR = selecteditem.ZDivazifeHPR,
                         ZDivazifeT = selecteditem.ZDivazifeT,
-                        
-                        
-                        
+                        bayganiFile = selecteditem.bayganiFile,
+                        gantFile = selecteditem.gantFile,
+                        gharardadFile = selecteditem.gharardadFile,
+                        listmavadFile = selecteditem.listmavadFile,
+                        mojavezFile = selecteditem.mojavezFile,
+                        motamamFile = selecteditem.motamamFile,
+                        peyvastFile = selecteditem.peyvastFile,
+                        pishraftFile = selecteditem.pishraftFile,
+
+
+
+
+
+
 
 
                     };

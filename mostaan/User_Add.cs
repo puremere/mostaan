@@ -62,5 +62,21 @@ namespace mostaan
         {
 
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            zero form = new zero();
+            form.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            User_List list = new User_List(dt);
+
+            list.Show();
+            this.Hide();
+        }
     }
 }

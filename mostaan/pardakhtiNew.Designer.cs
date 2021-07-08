@@ -57,10 +57,16 @@
             this.radPanel3 = new Telerik.WinControls.UI.RadPanel();
             this.gheymat = new System.Windows.Forms.Label();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.radPanel5 = new Telerik.WinControls.UI.RadPanel();
+            this.bankType = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.radPanel8 = new Telerik.WinControls.UI.RadPanel();
+            this.date = new BehComponents.DateTimePickerX();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
             this.label10 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -76,12 +82,10 @@
             this.imageName = new System.Windows.Forms.Label();
             this.referbish = new System.Windows.Forms.Label();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.radPanel5 = new Telerik.WinControls.UI.RadPanel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.bankType = new System.Windows.Forms.ComboBox();
-            this.date = new BehComponents.DateTimePickerX();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.radScrollablePanel1)).BeginInit();
             this.radScrollablePanel1.PanelContainer.SuspendLayout();
             this.radScrollablePanel1.SuspendLayout();
@@ -105,6 +109,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPanel3)).BeginInit();
             this.radPanel3.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel5)).BeginInit();
+            this.radPanel5.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel8)).BeginInit();
@@ -118,10 +126,10 @@
             this.filterPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).BeginInit();
             this.radPanel2.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.radPanel5)).BeginInit();
-            this.radPanel5.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // radScrollablePanel1
@@ -141,15 +149,17 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel11, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel14, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel8, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.header, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel20, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.webBrowser1, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel11, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel14, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel8, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.header, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel20, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.webBrowser1, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.panel6, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 11);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowCount = 7;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.33333F));
@@ -167,12 +177,12 @@
             this.tableLayoutPanel11.Controls.Add(this.tableLayoutPanel7, 1, 0);
             this.tableLayoutPanel11.Controls.Add(this.tableLayoutPanel4, 0, 0);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 172);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 208);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 1;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 107F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(931, 107);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(931, 100);
             this.tableLayoutPanel11.TabIndex = 7;
             // 
             // tableLayoutPanel7
@@ -188,7 +198,7 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(460, 101);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(460, 94);
             this.tableLayoutPanel7.TabIndex = 2;
             // 
             // label2
@@ -196,7 +206,7 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(454, 46);
+            this.label2.Size = new System.Drawing.Size(454, 39);
             this.label2.TabIndex = 0;
             this.label2.Text = "بانک";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -205,7 +215,7 @@
             // 
             this.panel2.Controls.Add(this.radPanel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 49);
+            this.panel2.Location = new System.Drawing.Point(3, 42);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(3);
             this.panel2.Size = new System.Drawing.Size(454, 49);
@@ -246,7 +256,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(459, 101);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(459, 94);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // label4
@@ -254,7 +264,7 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(453, 46);
+            this.label4.Size = new System.Drawing.Size(453, 39);
             this.label4.TabIndex = 0;
             this.label4.Text = "شماره چک";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -263,7 +273,7 @@
             // 
             this.panel4.Controls.Add(this.radPanel6);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 49);
+            this.panel4.Location = new System.Drawing.Point(3, 42);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(3);
             this.panel4.Size = new System.Drawing.Size(453, 49);
@@ -309,11 +319,11 @@
             this.tableLayoutPanel14.Controls.Add(this.tableLayoutPanel2, 1, 0);
             this.tableLayoutPanel14.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel14.Location = new System.Drawing.Point(3, 285);
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(3, 314);
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 1;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(931, 107);
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(931, 100);
             this.tableLayoutPanel14.TabIndex = 5;
             // 
             // tableLayoutPanel2
@@ -329,7 +339,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(460, 101);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(460, 94);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // label1
@@ -337,7 +347,7 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(454, 41);
+            this.label1.Size = new System.Drawing.Size(454, 34);
             this.label1.TabIndex = 0;
             this.label1.Text = "شماره تامین";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -346,7 +356,7 @@
             // 
             this.panel1.Controls.Add(this.radPanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 44);
+            this.panel1.Location = new System.Drawing.Point(3, 37);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(3);
             this.panel1.Size = new System.Drawing.Size(454, 54);
@@ -402,7 +412,7 @@
             this.tamin.Location = new System.Drawing.Point(262, 15);
             this.tamin.Name = "tamin";
             this.tamin.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tamin.Size = new System.Drawing.Size(184, 15);
+            this.tamin.Size = new System.Drawing.Size(184, 13);
             this.tamin.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -418,7 +428,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(459, 101);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(459, 94);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // label3
@@ -426,7 +436,7 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(453, 40);
+            this.label3.Size = new System.Drawing.Size(453, 33);
             this.label3.TabIndex = 0;
             this.label3.Text = "قیمت";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -435,7 +445,7 @@
             // 
             this.panel3.Controls.Add(this.radPanel3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 43);
+            this.panel3.Location = new System.Drawing.Point(3, 36);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(3);
             this.panel3.Size = new System.Drawing.Size(453, 55);
@@ -472,248 +482,44 @@
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel13, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel16, 2, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 59);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 102);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(931, 107);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(931, 100);
             this.tableLayoutPanel8.TabIndex = 3;
             // 
-            // tableLayoutPanel13
+            // tableLayoutPanel5
             // 
-            this.tableLayoutPanel13.ColumnCount = 1;
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel13.Controls.Add(this.label8, 0, 0);
-            this.tableLayoutPanel13.Controls.Add(this.panel8, 0, 1);
-            this.tableLayoutPanel13.Location = new System.Drawing.Point(313, 3);
-            this.tableLayoutPanel13.Name = "tableLayoutPanel13";
-            this.tableLayoutPanel13.RowCount = 2;
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel13.Size = new System.Drawing.Size(304, 101);
-            this.tableLayoutPanel13.TabIndex = 1;
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.label5, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.panel5, 0, 1);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 2;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(304, 94);
+            this.tableLayoutPanel5.TabIndex = 2;
             // 
-            // label8
+            // label5
             // 
-            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Location = new System.Drawing.Point(3, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(298, 48);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "تاریخ سند";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.radPanel8);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(3, 51);
-            this.panel8.Name = "panel8";
-            this.panel8.Padding = new System.Windows.Forms.Padding(3);
-            this.panel8.Size = new System.Drawing.Size(298, 47);
-            this.panel8.TabIndex = 1;
-            // 
-            // radPanel8
-            // 
-            this.radPanel8.Controls.Add(this.date);
-            this.radPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radPanel8.Location = new System.Drawing.Point(3, 3);
-            this.radPanel8.Name = "radPanel8";
-            this.radPanel8.Padding = new System.Windows.Forms.Padding(2);
-            this.radPanel8.Size = new System.Drawing.Size(292, 41);
-            this.radPanel8.TabIndex = 1;
-            ((Telerik.WinControls.UI.RadPanelElement)(this.radPanel8.GetChildAt(0))).Padding = new System.Windows.Forms.Padding(2);
-            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanel8.GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(208)))), ((int)(((byte)(209)))));
-            // 
-            // tableLayoutPanel16
-            // 
-            this.tableLayoutPanel16.ColumnCount = 1;
-            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel16.Controls.Add(this.label10, 0, 0);
-            this.tableLayoutPanel16.Controls.Add(this.panel10, 0, 1);
-            this.tableLayoutPanel16.Location = new System.Drawing.Point(623, 3);
-            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
-            this.tableLayoutPanel16.RowCount = 2;
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
-            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(305, 101);
-            this.tableLayoutPanel16.TabIndex = 0;
-            // 
-            // label10
-            // 
-            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Location = new System.Drawing.Point(3, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(299, 48);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "شماره تضمین";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.radPanel10);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(3, 51);
-            this.panel10.Name = "panel10";
-            this.panel10.Padding = new System.Windows.Forms.Padding(3);
-            this.panel10.Size = new System.Drawing.Size(299, 47);
-            this.panel10.TabIndex = 1;
-            // 
-            // radPanel10
-            // 
-            this.radPanel10.Controls.Add(this.shomareSanad1);
-            this.radPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radPanel10.Location = new System.Drawing.Point(3, 3);
-            this.radPanel10.Name = "radPanel10";
-            this.radPanel10.Padding = new System.Windows.Forms.Padding(2);
-            this.radPanel10.Size = new System.Drawing.Size(293, 41);
-            this.radPanel10.TabIndex = 0;
-            ((Telerik.WinControls.UI.RadPanelElement)(this.radPanel10.GetChildAt(0))).Padding = new System.Windows.Forms.Padding(2);
-            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanel10.GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(208)))), ((int)(((byte)(209)))));
-            // 
-            // shomareSanad1
-            // 
-            this.shomareSanad1.BackColor = System.Drawing.SystemColors.Control;
-            this.shomareSanad1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.shomareSanad1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.shomareSanad1.Location = new System.Drawing.Point(2, 2);
-            this.shomareSanad1.Name = "shomareSanad1";
-            this.shomareSanad1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.shomareSanad1.Size = new System.Drawing.Size(289, 15);
-            this.shomareSanad1.TabIndex = 0;
-            this.shomareSanad1.Enter += new System.EventHandler(this.shomareSanad1_Enter);
-            this.shomareSanad1.Leave += new System.EventHandler(this.shomareSanad1_Leave);
-            // 
-            // header
-            // 
-            this.header.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.header.Location = new System.Drawing.Point(3, 0);
-            this.header.Name = "header";
-            this.header.Size = new System.Drawing.Size(931, 56);
-            this.header.TabIndex = 0;
-            this.header.Text = "صدور چک";
-            this.header.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tableLayoutPanel20
-            // 
-            this.tableLayoutPanel20.ColumnCount = 5;
-            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.24793F));
-            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.75207F));
-            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 164F));
-            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
-            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 249F));
-            this.tableLayoutPanel20.Controls.Add(this.filterPanel1, 1, 0);
-            this.tableLayoutPanel20.Controls.Add(this.sourceLable, 3, 0);
-            this.tableLayoutPanel20.Controls.Add(this.radPanel2, 2, 0);
-            this.tableLayoutPanel20.Controls.Add(this.imageName, 4, 0);
-            this.tableLayoutPanel20.Controls.Add(this.referbish, 0, 0);
-            this.tableLayoutPanel20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel20.Location = new System.Drawing.Point(3, 398);
-            this.tableLayoutPanel20.Name = "tableLayoutPanel20";
-            this.tableLayoutPanel20.RowCount = 1;
-            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel20.Size = new System.Drawing.Size(931, 52);
-            this.tableLayoutPanel20.TabIndex = 8;
-            // 
-            // filterPanel1
-            // 
-            this.filterPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.filterPanel1.BackColor = System.Drawing.Color.Silver;
-            this.filterPanel1.Controls.Add(this.filter);
-            this.filterPanel1.Location = new System.Drawing.Point(300, 3);
-            this.filterPanel1.Name = "filterPanel1";
-            this.filterPanel1.Size = new System.Drawing.Size(119, 46);
-            this.filterPanel1.TabIndex = 4;
-            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.filterPanel1.GetChildAt(0).GetChildAt(1))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
-            // 
-            // filter
-            // 
-            this.filter.BackColor = System.Drawing.Color.Transparent;
-            this.filter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.filter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.filter.ForeColor = System.Drawing.Color.White;
-            this.filter.Location = new System.Drawing.Point(0, 0);
-            this.filter.Name = "filter";
-            this.filter.Size = new System.Drawing.Size(119, 46);
-            this.filter.TabIndex = 0;
-            this.filter.Text = "تایید";
-            this.filter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.filter.Click += new System.EventHandler(this.filter_Click);
-            // 
-            // sourceLable
-            // 
-            this.sourceLable.AutoSize = true;
-            this.sourceLable.Location = new System.Drawing.Point(589, 0);
-            this.sourceLable.Name = "sourceLable";
-            this.sourceLable.Size = new System.Drawing.Size(38, 13);
-            this.sourceLable.TabIndex = 3;
-            this.sourceLable.Text = "label3";
-            this.sourceLable.Visible = false;
-            // 
-            // radPanel2
-            // 
-            this.radPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.radPanel2.BackColor = System.Drawing.Color.Silver;
-            this.radPanel2.Controls.Add(this.uploadImage);
-            this.radPanel2.Location = new System.Drawing.Point(425, 3);
-            this.radPanel2.Name = "radPanel2";
-            this.radPanel2.Size = new System.Drawing.Size(158, 46);
-            this.radPanel2.TabIndex = 4;
-            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanel2.GetChildAt(0).GetChildAt(1))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
-            // 
-            // uploadImage
-            // 
-            this.uploadImage.BackColor = System.Drawing.Color.Transparent;
-            this.uploadImage.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uploadImage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uploadImage.ForeColor = System.Drawing.Color.White;
-            this.uploadImage.Location = new System.Drawing.Point(0, 0);
-            this.uploadImage.Name = "uploadImage";
-            this.uploadImage.Size = new System.Drawing.Size(158, 46);
-            this.uploadImage.TabIndex = 0;
-            this.uploadImage.Text = "آپلود فایل";
-            this.uploadImage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uploadImage.Click += new System.EventHandler(this.uploadImage_Click);
-            // 
-            // imageName
-            // 
-            this.imageName.AutoSize = true;
-            this.imageName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.imageName.Location = new System.Drawing.Point(684, 0);
-            this.imageName.Name = "imageName";
-            this.imageName.Size = new System.Drawing.Size(244, 52);
-            this.imageName.TabIndex = 6;
-            this.imageName.Visible = false;
-            // 
-            // referbish
-            // 
-            this.referbish.AutoSize = true;
-            this.referbish.Location = new System.Drawing.Point(3, 0);
-            this.referbish.Name = "referbish";
-            this.referbish.Size = new System.Drawing.Size(0, 13);
-            this.referbish.TabIndex = 8;
-            this.referbish.Visible = false;
-            // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(3, 456);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(931, 391);
-            this.webBrowser1.TabIndex = 9;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Location = new System.Drawing.Point(3, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(298, 41);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "نوع بانک";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.radPanel5);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(3, 51);
+            this.panel5.Location = new System.Drawing.Point(3, 44);
             this.panel5.Name = "panel5";
             this.panel5.Padding = new System.Windows.Forms.Padding(3);
             this.panel5.Size = new System.Drawing.Size(298, 47);
@@ -731,32 +537,6 @@
             ((Telerik.WinControls.UI.RadPanelElement)(this.radPanel5.GetChildAt(0))).Padding = new System.Windows.Forms.Padding(2);
             ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanel5.GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(208)))), ((int)(((byte)(209)))));
             // 
-            // label5
-            // 
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Location = new System.Drawing.Point(3, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(298, 48);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "نوع بانک";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 1;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Controls.Add(this.label5, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.panel5, 0, 1);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 2;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(304, 101);
-            this.tableLayoutPanel5.TabIndex = 2;
-            // 
             // bankType
             // 
             this.bankType.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -769,6 +549,53 @@
             this.bankType.Size = new System.Drawing.Size(288, 21);
             this.bankType.TabIndex = 1;
             this.bankType.SelectedIndexChanged += new System.EventHandler(this.bankType_SelectedIndexChanged);
+            // 
+            // tableLayoutPanel13
+            // 
+            this.tableLayoutPanel13.ColumnCount = 1;
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel13.Controls.Add(this.label8, 0, 0);
+            this.tableLayoutPanel13.Controls.Add(this.panel8, 0, 1);
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(313, 3);
+            this.tableLayoutPanel13.Name = "tableLayoutPanel13";
+            this.tableLayoutPanel13.RowCount = 2;
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(304, 94);
+            this.tableLayoutPanel13.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label8.Location = new System.Drawing.Point(3, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(298, 41);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "تاریخ سند";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.radPanel8);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(3, 44);
+            this.panel8.Name = "panel8";
+            this.panel8.Padding = new System.Windows.Forms.Padding(3);
+            this.panel8.Size = new System.Drawing.Size(298, 47);
+            this.panel8.TabIndex = 1;
+            // 
+            // radPanel8
+            // 
+            this.radPanel8.Controls.Add(this.date);
+            this.radPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radPanel8.Location = new System.Drawing.Point(3, 3);
+            this.radPanel8.Name = "radPanel8";
+            this.radPanel8.Padding = new System.Windows.Forms.Padding(2);
+            this.radPanel8.Size = new System.Drawing.Size(292, 41);
+            this.radPanel8.TabIndex = 1;
+            ((Telerik.WinControls.UI.RadPanelElement)(this.radPanel8.GetChildAt(0))).Padding = new System.Windows.Forms.Padding(2);
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanel8.GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(208)))), ((int)(((byte)(209)))));
             // 
             // date
             // 
@@ -842,6 +669,236 @@
             this.date.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.date.TextWhenClearButtonClicked = "";
             // 
+            // tableLayoutPanel16
+            // 
+            this.tableLayoutPanel16.ColumnCount = 1;
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel16.Controls.Add(this.label10, 0, 0);
+            this.tableLayoutPanel16.Controls.Add(this.panel10, 0, 1);
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(623, 3);
+            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
+            this.tableLayoutPanel16.RowCount = 2;
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(305, 94);
+            this.tableLayoutPanel16.TabIndex = 0;
+            // 
+            // label10
+            // 
+            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label10.Location = new System.Drawing.Point(3, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(299, 41);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "شماره تضمین";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.radPanel10);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(3, 44);
+            this.panel10.Name = "panel10";
+            this.panel10.Padding = new System.Windows.Forms.Padding(3);
+            this.panel10.Size = new System.Drawing.Size(299, 47);
+            this.panel10.TabIndex = 1;
+            // 
+            // radPanel10
+            // 
+            this.radPanel10.Controls.Add(this.shomareSanad1);
+            this.radPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radPanel10.Location = new System.Drawing.Point(3, 3);
+            this.radPanel10.Name = "radPanel10";
+            this.radPanel10.Padding = new System.Windows.Forms.Padding(2);
+            this.radPanel10.Size = new System.Drawing.Size(293, 41);
+            this.radPanel10.TabIndex = 0;
+            ((Telerik.WinControls.UI.RadPanelElement)(this.radPanel10.GetChildAt(0))).Padding = new System.Windows.Forms.Padding(2);
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanel10.GetChildAt(0).GetChildAt(1))).ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(208)))), ((int)(((byte)(209)))));
+            // 
+            // shomareSanad1
+            // 
+            this.shomareSanad1.BackColor = System.Drawing.SystemColors.Control;
+            this.shomareSanad1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.shomareSanad1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.shomareSanad1.Location = new System.Drawing.Point(2, 2);
+            this.shomareSanad1.Name = "shomareSanad1";
+            this.shomareSanad1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.shomareSanad1.Size = new System.Drawing.Size(289, 13);
+            this.shomareSanad1.TabIndex = 0;
+            this.shomareSanad1.Enter += new System.EventHandler(this.shomareSanad1_Enter);
+            this.shomareSanad1.Leave += new System.EventHandler(this.shomareSanad1_Leave);
+            // 
+            // header
+            // 
+            this.header.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.header.Location = new System.Drawing.Point(3, 46);
+            this.header.Name = "header";
+            this.header.Size = new System.Drawing.Size(931, 53);
+            this.header.TabIndex = 0;
+            this.header.Text = "صدور چک";
+            this.header.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel20
+            // 
+            this.tableLayoutPanel20.ColumnCount = 5;
+            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.24793F));
+            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.75207F));
+            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 164F));
+            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
+            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 250F));
+            this.tableLayoutPanel20.Controls.Add(this.filterPanel1, 1, 0);
+            this.tableLayoutPanel20.Controls.Add(this.sourceLable, 3, 0);
+            this.tableLayoutPanel20.Controls.Add(this.radPanel2, 2, 0);
+            this.tableLayoutPanel20.Controls.Add(this.imageName, 4, 0);
+            this.tableLayoutPanel20.Controls.Add(this.referbish, 0, 0);
+            this.tableLayoutPanel20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel20.Location = new System.Drawing.Point(3, 420);
+            this.tableLayoutPanel20.Name = "tableLayoutPanel20";
+            this.tableLayoutPanel20.RowCount = 1;
+            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel20.Size = new System.Drawing.Size(931, 49);
+            this.tableLayoutPanel20.TabIndex = 8;
+            // 
+            // filterPanel1
+            // 
+            this.filterPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.filterPanel1.BackColor = System.Drawing.Color.Silver;
+            this.filterPanel1.Controls.Add(this.filter);
+            this.filterPanel1.Location = new System.Drawing.Point(299, 3);
+            this.filterPanel1.Name = "filterPanel1";
+            this.filterPanel1.Size = new System.Drawing.Size(119, 43);
+            this.filterPanel1.TabIndex = 4;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.filterPanel1.GetChildAt(0).GetChildAt(1))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+            // 
+            // filter
+            // 
+            this.filter.BackColor = System.Drawing.Color.Transparent;
+            this.filter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.filter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.filter.ForeColor = System.Drawing.Color.White;
+            this.filter.Location = new System.Drawing.Point(0, 0);
+            this.filter.Name = "filter";
+            this.filter.Size = new System.Drawing.Size(119, 43);
+            this.filter.TabIndex = 0;
+            this.filter.Text = "تایید";
+            this.filter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.filter.Click += new System.EventHandler(this.filter_Click);
+            // 
+            // sourceLable
+            // 
+            this.sourceLable.AutoSize = true;
+            this.sourceLable.Location = new System.Drawing.Point(588, 0);
+            this.sourceLable.Name = "sourceLable";
+            this.sourceLable.Size = new System.Drawing.Size(38, 13);
+            this.sourceLable.TabIndex = 3;
+            this.sourceLable.Text = "label3";
+            this.sourceLable.Visible = false;
+            // 
+            // radPanel2
+            // 
+            this.radPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.radPanel2.BackColor = System.Drawing.Color.Silver;
+            this.radPanel2.Controls.Add(this.uploadImage);
+            this.radPanel2.Location = new System.Drawing.Point(424, 3);
+            this.radPanel2.Name = "radPanel2";
+            this.radPanel2.Size = new System.Drawing.Size(158, 43);
+            this.radPanel2.TabIndex = 4;
+            ((Telerik.WinControls.Primitives.BorderPrimitive)(this.radPanel2.GetChildAt(0).GetChildAt(1))).Visibility = Telerik.WinControls.ElementVisibility.Collapsed;
+            // 
+            // uploadImage
+            // 
+            this.uploadImage.BackColor = System.Drawing.Color.Transparent;
+            this.uploadImage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uploadImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uploadImage.ForeColor = System.Drawing.Color.White;
+            this.uploadImage.Location = new System.Drawing.Point(0, 0);
+            this.uploadImage.Name = "uploadImage";
+            this.uploadImage.Size = new System.Drawing.Size(158, 43);
+            this.uploadImage.TabIndex = 0;
+            this.uploadImage.Text = "آپلود فایل";
+            this.uploadImage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uploadImage.Click += new System.EventHandler(this.uploadImage_Click);
+            // 
+            // imageName
+            // 
+            this.imageName.AutoSize = true;
+            this.imageName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.imageName.Location = new System.Drawing.Point(683, 0);
+            this.imageName.Name = "imageName";
+            this.imageName.Size = new System.Drawing.Size(245, 49);
+            this.imageName.TabIndex = 6;
+            this.imageName.Visible = false;
+            // 
+            // referbish
+            // 
+            this.referbish.AutoSize = true;
+            this.referbish.Location = new System.Drawing.Point(3, 0);
+            this.referbish.Name = "referbish";
+            this.referbish.Size = new System.Drawing.Size(0, 13);
+            this.referbish.TabIndex = 8;
+            this.referbish.Visible = false;
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(3, 475);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(931, 372);
+            this.webBrowser1.TabIndex = 9;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.tableLayoutPanel6);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(3, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(931, 40);
+            this.panel6.TabIndex = 10;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 3;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel6.Controls.Add(this.pictureBox1, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.pictureBox2, 1, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(931, 40);
+            this.tableLayoutPanel6.TabIndex = 5;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::mostaan.Properties.Resources.NicePng_arrow_clipart_png_440119;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::mostaan.Properties.Resources.NicePng_camping_png_2083364;
+            this.pictureBox2.Location = new System.Drawing.Point(49, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 34);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // pardakhtiNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -875,6 +932,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPanel3)).EndInit();
             this.radPanel3.ResumeLayout(false);
             this.tableLayoutPanel8.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel5)).EndInit();
+            this.radPanel5.ResumeLayout(false);
             this.tableLayoutPanel13.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radPanel8)).EndInit();
@@ -890,10 +951,10 @@
             this.filterPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radPanel2)).EndInit();
             this.radPanel2.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.radPanel5)).EndInit();
-            this.radPanel5.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -953,5 +1014,9 @@
         private System.Windows.Forms.Panel panel5;
         private Telerik.WinControls.UI.RadPanel radPanel5;
         private System.Windows.Forms.ComboBox bankType;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -217,5 +217,20 @@ namespace mostaan
                 return;
             }
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            zero form = new zero();
+            form.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Bakhsh_Menu intro = new Bakhsh_Menu();
+
+            intro.Show();
+            this.Hide();
+        }
     }
 }

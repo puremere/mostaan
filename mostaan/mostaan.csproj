@@ -677,6 +677,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="BehComponents.dll" />
+    <None Include="Resources\NicePng_camping-png_2083364.png" />
+    <None Include="Resources\NicePng_arrow-clipart-png_440119.png" />
     <None Include="Resources\del2.png" />
     <None Include="Resources\del1.png" />
     <None Include="Resources\del.png" />

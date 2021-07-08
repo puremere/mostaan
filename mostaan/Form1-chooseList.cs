@@ -60,7 +60,9 @@ namespace mostaan
             Form2_shenasnameAdd form = new Form2_shenasnameAdd();
 
             form.Show();
-           // this.Hide();
+           
+            
+            this.Hide();
         }
 
 
@@ -71,12 +73,26 @@ namespace mostaan
         {
             Form5_shenasnameList form = new Form5_shenasnameList();
             form.Show();
-           // this.Hide();
+            this.Hide();
         }
 
         private void Form1_chooseList_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            zero form = new zero();
+            form.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            zero form = new zero();
+            form.Show();
+            this.Hide();
         }
     }
 }

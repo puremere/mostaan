@@ -112,6 +112,8 @@ namespace mostaan
         {
             daryaftiNew form = new daryaftiNew();
             form.Show();
+            this.Hide();
+
         }
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -198,6 +200,20 @@ namespace mostaan
 
 
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            zero form = new zero();
+            form.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            zero form = new zero();
+            form.Show();
+            this.Hide();
         }
     }
 }

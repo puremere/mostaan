@@ -232,6 +232,19 @@ namespace mostaan
             }
         }
 
-       
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            zero form = new zero();
+            form.Show();
+            this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Markaz_Menu form = new Markaz_Menu();
+
+            form.Show();
+            this.Hide();
+        }
     }
 }
